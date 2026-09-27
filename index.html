@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- The canvas background for scroll animation -->
+    <div class="canvas-container">
+        <canvas id="scroll-sequence"></canvas>
+    </div>
+
+    <!-- The 500vh scroll container to drive the animation -->
+    <div class="scroll-spacer"></div>
+
+    <!-- The Fixed UI overlay containing the designed sections -->
+    <div class="grid-overlay"></div>
+
+    <div class="ui-layer">
+        <!-- Floating plus crosshairs matching the grid intersection points -->
+        <div class="crosshair ch-1"></div>
+        <div class="crosshair ch-2"></div>
+        <div class="crosshair ch-3"></div>
+        <div class="crosshair ch-4"></div>
+
+        <!-- Huge Background Text Fixed in middle -->
+        <div class="hero-bg-text">SUJAN</div>
+
+        <header>
+            <div class="logo"></div>
+            <nav id="main-nav">
+                <a href="#tab-home" class="active">Home</a>
+                <a href="#tab-about">About</a>
+                <a href="#tab-project">Project</a>
+                <a href="#tab-certifications">Certifications </a>
+                <a href="#tab-contact">Contact</a>
+            </nav>
+            <div class="hamburger">
+                <span></span><span></span>
+            </div>
+        </header>
+
+        <div id="tab-home" class="tab-content active-tab">
+            <div class="hero-content">
+                <!-- Left Side texts -->
+                <div class="hero-left-col">
+                    <p class="left-desc">AI & Data Science Developer building intelligent solutions for real-world
+                        problems<br>Passionate about AI, software development, and creating meaningful digital
+                        experiences<br>From ideas to working products — I build, learn, and innovate</p>
+                    <div class="bottom-title-area">
+                        <span class="copyright"></span>
+                        <h1 class="main-title">SUJAN</h1>
+                    </div>
+                </div>
+
+                <!-- Right Side cards -->
+                <div class="hero-right-col">
+                    <div class="card card-dark">
+                        <div class="card-dark-left">
+                            <img src="avatar.jpg.jpeg" alt="avatar" class="avatar">
+                            <div class="talk-details">
+                                <span class="talk-title">Let's Talk <span
+                                        style="margin-left:8px; font-size:10px;">✺</span></span>
+                                <span class="talk-name">Sujan</span>
+                                <span class="talk-role">AI Engineer</span>
+                            </div>
+                        </div>
+                        <div class="arrow-btn">
+                            ↗
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-about" class="tab-content" style="overflow-y: auto; pointer-events: auto; max-height: calc(100vh - 120px);">
+            <div class="premium-project-layout" style="margin-top: 5vh; padding-bottom: 20vh; max-width: 1200px; margin-left: auto; margin-right: auto; padding-right: 40px; padding-left: 20px; position: relative;">
+                
+                <!-- Ambient Glow Backgrounds for attractiveness -->
+                <div class="ambient-glow glow-blue"></div>
+                <div class="ambient-glow glow-purple"></div>
+
+                <!-- About Section - Top Split -->
+                <div style="display: flex; gap: 60px; margin-bottom: 100px; align-items: stretch; flex-wrap: wrap;">
+                    
+                    <!-- Left: About Me Text -->
+                    <div class="about-custom-text" style="flex: 1.2; min-width: 320px; animation: fadeIn 0.6s ease-in-out;">
+                        <div style="color: #818cf8; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px;">
+                            <span style="display:inline-block; width: 30px; border-top: 1px solid #818cf8; margin-bottom:4px; margin-right:10px;"></span>
+                            About Me
+                        </div>
+                        <h2 style="font-size: 2.8rem; font-weight: 700; line-height: 1.2; margin-bottom: 25px; color: #ffffff; letter-spacing: -1px;">
+                            I'm passionate about creating <span style="color: #a1c4fd;">digital solutions</span>
+                        </h2>
+                        <div class="card-desc" style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 35px; max-width: 95%;">
+                            <p>With massive passion for AI and Software Development, I help bring ideas to life through clean, robust, and intelligent code. I build projects that combine technology with real-world impact — turning complex concepts into practical products.</p>
+                        </div>
+                        <a href="#tab-project" onclick="document.querySelector('a[href=\'#tab-project\']').click()" class="glass-badge btn-primary-about" style="padding: 12px 28px; font-size: 0.95rem; border-radius: 8px; color: #fff; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.5); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease;">
+                            Learn More About Me 
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Right: Metrics Grid -->
+                    <div style="flex: 1; min-width: 320px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; animation: fadeIn 0.8s ease-in-out;">
+                        <div class="glass-card anim-tech-card" style="padding: 24px 20px; display: flex; align-items: center; gap: 18px; pointer-events: auto;">
+                            <div style="background: rgba(99, 102, 241, 0.15); padding: 14px; border-radius: 12px; color: #a1c4fd;">
+                                <!-- Calendar/Experience Icon -->
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #fff; font-family: 'Outfit';">1+</div>
+                                <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.2;">Years <br>Experience</div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card anim-tech-card" style="padding: 24px 20px; display: flex; align-items: center; gap: 18px; pointer-events: auto; animation-delay: 0.1s;">
+                            <div style="background: rgba(99, 102, 241, 0.15); padding: 14px; border-radius: 12px; color: #a1c4fd;">
+                                <!-- Code Icon -->
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/></svg>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #fff; font-family: 'Outfit';">20+</div>
+                                <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.2;">Projects <br>Completed</div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card anim-tech-card" style="padding: 24px 20px; display: flex; align-items: center; gap: 18px; pointer-events: auto; animation-delay: 0.2s;">
+                            <div style="background: rgba(99, 102, 241, 0.15); padding: 14px; border-radius: 12px; color: #a1c4fd;">
+                                <!-- AI / Brain Icon -->
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4.5 4a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/><path d="M8 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-5 7a5 5 0 1 1 10 0v1a.5.5 0 0 1-1 0v-1a4 4 0 1 0-8 0v1a.5.5 0 0 1-1 0v-1z"/></svg>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #fff; font-family: 'Outfit';">5+</div>
+                                <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.2;">AI Models <br>Deployed</div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card anim-tech-card" style="padding: 24px 20px; display: flex; align-items: center; gap: 18px; pointer-events: auto; animation-delay: 0.3s;">
+                            <div style="background: rgba(99, 102, 241, 0.15); padding: 14px; border-radius: 12px; color: #a1c4fd;">
+                                <!-- Trophy Icon -->
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5z"/></svg>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #fff; font-family: 'Outfit';">2</div>
+                                <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.2;">Hackathons <br>Won</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 0 0 80px 0;">
+
+                <!-- Technical Stack Section (Progress bars style) -->
+                <div class="about-custom-text" style="text-align: center; margin-bottom: 60px; animation: fadeIn 1s ease-in-out;">
+                    <div style="color: #818cf8; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;">My Skills</div>
+                    <h2 style="font-size: 2.5rem; font-weight: 700; color: #fff; letter-spacing: -0.5px;">Technologies I Master</h2>
+                </div>
+
+                <div class="about-custom-text project-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                    
+                    <!-- Progress Item Card -->
+                    <div class="glass-card skill-card" style="padding: 24px; animation: fadeIn 0.6s ease-in-out forwards; animation-delay: 0.1s; opacity: 0; pointer-events: auto;">
+                        <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;">
+                            <span style="display: flex; align-items: center; gap: 12px;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(99, 102, 241, 0.15); border-radius: 8px; color: #a1c4fd; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(99, 102, 241, 0.2);">PY</span>
+                                Python
+                            </span>
+                            <span style="color: var(--text-muted); font-family: monospace; font-size: 1.1rem; align-self: center;">95%</span>
+                        </div>
+                        <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
+                            <div class="progress-fill shimmer-gradient" style="width: 95%; height: 100%; border-radius: 8px;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Item Card -->
+                    <div class="glass-card skill-card" style="padding: 24px; animation: fadeIn 0.6s ease-in-out forwards; animation-delay: 0.2s; opacity: 0; pointer-events: auto;">
+                        <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;">
+                            <span style="display: flex; align-items: center; gap: 12px;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(99, 102, 241, 0.15); border-radius: 8px; color: #a1c4fd; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(99, 102, 241, 0.2);">AI</span>
+                                TensorFlow / ML
+                            </span>
+                            <span style="color: var(--text-muted); font-family: monospace; font-size: 1.1rem; align-self: center;">85%</span>
+                        </div>
+                        <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
+                            <div class="progress-fill shimmer-gradient" style="width: 85%; height: 100%; border-radius: 8px;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Item Card -->
+                    <div class="glass-card skill-card" style="padding: 24px; animation: fadeIn 0.6s ease-in-out forwards; animation-delay: 0.3s; opacity: 0; pointer-events: auto;">
+                        <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;">
+                            <span style="display: flex; align-items: center; gap: 12px;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(99, 102, 241, 0.15); border-radius: 8px; color: #a1c4fd; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(99, 102, 241, 0.2);">DB</span>
+                                SQL / Data Science
+                            </span>
+                            <span style="color: var(--text-muted); font-family: monospace; font-size: 1.1rem; align-self: center;">90%</span>
+                        </div>
+                        <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
+                            <div class="progress-fill shimmer-gradient" style="width: 90%; height: 100%; border-radius: 8px;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Item Card -->
+                    <div class="glass-card skill-card" style="padding: 24px; animation: fadeIn 0.6s ease-in-out forwards; animation-delay: 0.4s; opacity: 0; pointer-events: auto;">
+                        <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;">
+                            <span style="display: flex; align-items: center; gap: 12px;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(99, 102, 241, 0.15); border-radius: 8px; color: #a1c4fd; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(99, 102, 241, 0.2);">JS</span>
+                                React / Web
+                            </span>
+                            <span style="color: var(--text-muted); font-family: monospace; font-size: 1.1rem; align-self: center;">80%</span>
+                        </div>
+                        <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
+                            <div class="progress-fill shimmer-gradient" style="width: 80%; height: 100%; border-radius: 8px;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progress Item Card -->
+                    <div class="glass-card skill-card" style="padding: 24px; animation: fadeIn 0.6s ease-in-out forwards; animation-delay: 0.5s; opacity: 0; pointer-events: auto;">
+                        <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;">
+                            <span style="display: flex; align-items: center; gap: 12px;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(99, 102, 241, 0.15); border-radius: 8px; color: #a1c4fd; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(99, 102, 241, 0.2);">C++</span>
+                                C++ / Java / DSA
+                            </span>
+                            <span style="color: var(--text-muted); font-family: monospace; font-size: 1.1rem; align-self: center;">85%</span>
+                        </div>
+                        <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
+                            <div class="progress-fill shimmer-gradient" style="width: 85%; height: 100%; border-radius: 8px;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progress Item Card -->
+                    <div class="glass-card skill-card" style="padding: 24px; animation: fadeIn 0.6s ease-in-out forwards; animation-delay: 0.6s; opacity: 0; pointer-events: auto;">
+                        <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;">
+                            <span style="display: flex; align-items: center; gap: 12px;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(99, 102, 241, 0.15); border-radius: 8px; color: #a1c4fd; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(99, 102, 241, 0.2);">BK</span>
+                                FastAPI / REST
+                            </span>
+                            <span style="color: var(--text-muted); font-family: monospace; font-size: 1.1rem; align-self: center;">80%</span>
+                        </div>
+                        <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
+                            <div class="progress-fill shimmer-gradient" style="width: 80%; height: 100%; border-radius: 8px;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-project" class="tab-content">
+            <div class="premium-project-layout">
+                <div class="premium-header">
+                    <h2 class="gradient-title">Featured Intelligence</h2>
+                    <p class="premium-subtitle">Engineering next-generation applications through data science, machine learning, and robust architecture.</p>
+                </div>
+                
+                <div class="project-grid">
+                    <!-- Project Card 1 -->
+                    <div class="glass-card group">
+                        <div class="card-graphic">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80" alt="AI Interface">
+                            <div class="hover-overlay">
+                                <span class="explore-btn">Explore ↗</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="badge-container">
+                                <span class="glass-badge">LLMs</span>
+                                <span class="glass-badge">Python</span>
+                            </div>
+                            <h3 class="card-title">Nexus Synthesizer</h3>
+                            <p class="card-desc">An autonomous reasoning agent designed to seamlessly orchestrate complex workflows across multiple APIs with zero-shot prompting.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Card 2 -->
+                    <div class="glass-card group">
+                        <div class="card-graphic">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Analytics Graph">
+                            <div class="hover-overlay">
+                                <span class="explore-btn">Explore ↗</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="badge-container">
+                                <span class="glass-badge">Computer Vision</span>
+                                <span class="glass-badge">PyTorch</span>
+                            </div>
+                            <h3 class="card-title">Vision Cortex API</h3>
+                            <p class="card-desc">Real-time deep learning pipeline for object tracking and pose estimation, specifically optimized for extremely low-latency edge deployment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="glass-card group">
+                        <div class="card-graphic">
+                            <img src="https://images.unsplash.com/photo-1618477247222-ac60c49749ef?auto=format&fit=crop&w=600&q=80" alt="Code System">
+                            <div class="hover-overlay">
+                                <span class="explore-btn">Explore ↗</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="badge-container">
+                                <span class="glass-badge">Deep Learning</span>
+                                <span class="glass-badge">TensorFlow</span>
+                            </div>
+                            <h3 class="card-title">Predictive Core</h3>
+                            <p class="card-desc">Scalable neural network architecture forecasting temporal market fluctuations based on diverse unstructured data streams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-certifications" class="tab-content">
+            <div class="hero-content">
+                <div class="hero-left-col">
+                    <h1 class="main-title" style="font-size: 5vw;">CERTIFICATIONS</h1>
+                    <p class="left-desc" style="margin-top: 2rem;">Certified in Advanced ML, Cloud Architecture, and Data Science tools.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-contact" class="tab-content">
+            <div class="hero-content">
+                <div class="hero-left-col">
+                    <h1 class="main-title" style="font-size: 5vw;">CONTACT</h1>
+                    <p class="left-desc" style="margin-top: 2rem;">Let's build something amazing together!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
