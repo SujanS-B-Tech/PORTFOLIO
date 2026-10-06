@@ -1,14 +1,7 @@
-photos/
-certification/
+# Standard NodeJS/Environment Ignore Rules
+node_modules/
+.env
+.DS_Store
 
-# Ignore image files
-*.jpg
-*.jpeg
-*.png
-*.svg
-*.gif
-*.webp
-
-# Ignore documents and resumes
+# Ignore PDF resume since we now use Google Drive
 *.pdf
-Sujan_S_Resume_OnePage.pdf
