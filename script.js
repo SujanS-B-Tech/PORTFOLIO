@@ -4,7 +4,7 @@ const context = canvas.getContext("2d");
 const frameCount = 300;
 // Format numbers as 001, 002, ..., 300
 const currentFrame = index => (
-  `ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`
+  `photos/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`
 );
 
 const images = [];
