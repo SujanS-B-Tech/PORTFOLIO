@@ -819,3 +819,94 @@ nav a.active::after {
     background: rgba(255,255,255,0.2);
     border-radius: 3px;
 }
+
+/* =========================================
+   MOBILE RESPONSIVENESS (SMARTPHONES)
+   ========================================= */
+@media (max-width: 850px) {
+    /* Header & Navigation Fixes */
+    header {
+        padding: 1rem 5vw;
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav#main-nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav#main-nav a {
+        font-size: 0.8rem;
+    }
+    
+    /* Typography Scaling */
+    .main-title { font-size: 3rem !important; }
+    .hero-bg-text { font-size: 35vw; opacity: 0.05; }
+    .premium-subtitle { font-size: 1rem !important; }
+    .gradient-title { font-size: 2.2rem !important; }
+    
+    /* Layout Adjustments */
+    .hero-content {
+        flex-direction: column-reverse;
+        padding: 10vh 5vw;
+        text-align: center;
+    }
+    .hero-right-col {
+        margin-bottom: 2rem;
+    }
+    
+    /* About Section Overrides */
+    #tab-about > div > div:nth-child(2) {
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        height: auto !important;
+        padding-top: 15vh !important;
+        padding-bottom: 5vh !important;
+        gap: 30px !important;
+        pointer-events: auto !important;
+    }
+    #tab-about > div > div:nth-child(2) > div:first-child {
+        text-align: center !important;
+        margin-bottom: 20px !important;
+    }
+    #tab-about > div > div:nth-child(2) > div:last-child {
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding-bottom: 0 !important;
+    }
+    #tab-about > div > div:nth-child(2) > div:last-child > div {
+        align-items: center !important;
+    }
+    
+    /* Grid Overrides */
+    .project-grid {
+        grid-template-columns: 1fr;
+        padding: 0 5vw 10vh 5vw;
+    }
+    .cert-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+        gap: 10px !important;
+    }
+    
+    /* Contact Section Fixes */
+    #tab-contact h1 {
+        font-size: 2.5rem !important;
+        margin-top: 20px;
+    }
+    #tab-contact .premium-project-layout > div > div:last-child {
+        margin-top: 20px !important;
+    }
+    #tab-contact {
+        overflow-x: hidden;
+    }
+    
+    /* Modal Scaling */
+    .modal-content {
+        padding: 25px;
+        width: 95%;
+        max-height: 90vh;
+    }
+    .modal-title { font-size: 1.5rem; }
+    .project-actions { flex-direction: column; }
+}
