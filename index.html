@@ -14,10 +14,7 @@
         <canvas id="scroll-sequence"></canvas>
     </div>
 
-    <!-- The 500vh scroll container to drive the animation -->
-    <div class="scroll-spacer"></div>
-
-    <!-- The Fixed UI overlay containing the designed sections -->
+    <!-- The Fixed UI overlay containing crosshairs, background text, and header -->
     <div class="grid-overlay"></div>
 
     <div class="ui-layer">
@@ -43,8 +40,11 @@
                 <span></span><span></span>
             </div>
         </header>
+    </div>
 
-        <div id="tab-home" class="tab-content active-tab">
+    <!-- Scrolling Sections Layer -->
+    <div class="scroll-content">
+        <div id="tab-home" class="tab-content">
             <div class="hero-content">
                 <!-- Left Side texts -->
                 <div class="hero-left-col">
@@ -77,177 +77,85 @@
             </div>
         </div>
 
-        <div id="tab-about" class="tab-content" style="overflow-y: auto; pointer-events: auto; max-height: calc(100vh - 120px);">
-            <div class="premium-project-layout" style="margin-top: 5vh; padding-bottom: 20vh; max-width: 1200px; margin-left: auto; margin-right: auto; padding-right: 40px; padding-left: 20px; position: relative;">
-                
-                <!-- Ambient Glow Backgrounds for attractiveness -->
-                <div class="ambient-glow glow-blue"></div>
-                <div class="ambient-glow glow-purple"></div>
+        <div id="tab-about" class="tab-content" style="position: relative; overflow: hidden; height: 100vh; width: 100vw; background: transparent;">
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative;">
 
-                <!-- About Section - Top Split -->
-                <div style="display: flex; gap: 60px; margin-bottom: 100px; align-items: stretch; flex-wrap: wrap;">
+            <!-- Background massive text -->
+            <div style="position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); font-size: 18vw; font-weight: 900; color: rgba(255,255,255,0.03); z-index: 0; white-space: nowrap; pointer-events: none; user-select: none; font-family: 'Outfit', sans-serif; letter-spacing: 1vw;">
+                PORTFOLIO
+            </div>
+
+            <!-- Main Content Container (z-index 2) -->
+            <div style="position: relative; z-index: 2; width: 90%; max-width: 1300px; height: 100%; display: flex; justify-content: space-between; align-items: center; pointer-events: none;">
+
+                <!-- Left Column (Bio & Intro) -->
+                <div style="flex: 1; max-width: 500px; pointer-events: auto; animation: fadeIn 1s ease-in-out;">
+                    <div style="font-size: 2.2rem; font-weight: 700; color: #fff; margin-bottom: -5px; font-family: 'Inter', sans-serif;">Hi I'm</div>
+                    <div style="font-size: 5.5rem; font-weight: 900; color: #0059ff; line-height: 1.1; letter-spacing: -2px; margin-bottom: 5px; font-family: 'Inter', sans-serif;">Sujan</div>
                     
-                    <!-- Left: About Me Text -->
-                    <div class="about-custom-text" style="flex: 1.2; min-width: 320px; animation: fadeIn 0.6s ease-in-out;">
-                        <div style="color: #818cf8; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px;">
-                            <span style="display:inline-block; width: 30px; border-top: 1px solid #818cf8; margin-bottom:4px; margin-right:10px;"></span>
-                            About Me
-                        </div>
-                        <h2 style="font-size: 2.8rem; font-weight: 700; line-height: 1.2; margin-bottom: 25px; color: #ffffff; letter-spacing: -1px;">
-                            I'm passionate about creating <span style="color: #a1c4fd;">digital solutions</span>
-                        </h2>
-                        <div class="card-desc" style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 35px; max-width: 95%;">
-                            <p>With massive passion for AI and Software Development, I help bring ideas to life through clean, robust, and intelligent code. I build projects that combine technology with real-world impact — turning complex concepts into practical products.</p>
-                        </div>
-                        <a href="#tab-project" onclick="document.querySelector('a[href=\'#tab-project\']').click()" class="glass-badge btn-primary-about" style="padding: 12px 28px; font-size: 0.95rem; border-radius: 8px; color: #fff; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.5); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease;">
-                            Learn More About Me 
-                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                    <p style="font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-top: 25px; margin-bottom: 40px; font-weight: 300; font-family: 'Outfit', sans-serif;">
+                        I blend structured engineering with visual storytelling to build immersive, responsive digital experiences. Specializing in AI/ML integration, strong software foundations, and clean data architecture.
+                    </p>
+
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="https://drive.google.com/file/d/1yzV1KXLF7iByRRGxSNZ_l84FEN7-QnHS/view?usp=sharing" target="_blank" style="background: rgba(10,10,10,0.8); border: 1px solid rgba(255,255,255,0.08); color: #fff; padding: 14px 28px; border-radius: 30px; font-size: 0.95rem; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; backdrop-filter: blur(10px); font-family: 'Outfit', sans-serif;" onmouseover="this.style.background='rgba(30,30,30,0.9)'" onmouseout="this.style.background='rgba(10,10,10,0.8)'">
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M11 2H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zm-1 9H6V9h4v2z"/></svg> 
+                            View Resume
+                        </a>
+                        <a href="#tab-project" onclick="document.querySelector('a[href=\'#tab-project\']').click()" style="background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 14px 28px; border-radius: 30px; font-size: 0.95rem; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; font-family: 'Outfit', sans-serif;" onmouseover="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.3)';" onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.15)';">
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/></svg>
+                            View Projects
                         </a>
                     </div>
+                </div>
 
-                    <!-- Right: Metrics Grid -->
-                    <div style="flex: 1; min-width: 320px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; animation: fadeIn 0.8s ease-in-out;">
-                        <div class="glass-card anim-tech-card" style="padding: 24px 20px; display: flex; align-items: center; gap: 18px; pointer-events: auto;">
-                            <div style="background: rgba(99, 102, 241, 0.15); padding: 14px; border-radius: 12px; color: #a1c4fd;">
-                                <!-- Calendar/Experience Icon -->
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                <!-- Right Column (Tech Stacks layout mapped to the reference) -->
+                <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end; height: 100%; padding-bottom: 20vh; pointer-events: auto; animation: fadeIn 1.2s ease-in-out;">
+                    <div style="text-align: right; user-select: none;">
+                        <div style="color: #0059ff; font-weight: 800; font-size: 1.15rem; letter-spacing: 3px; margin-bottom: 12px; text-transform: uppercase; font-family: 'Inter', sans-serif;">Technologies I Master</div>
+                        
+                        <div style="font-size: 4.8rem; font-weight: 900; line-height: 1.05; letter-spacing: -2px; text-transform: uppercase; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; font-family: 'Inter', sans-serif;">
+                            
+                            <!-- Line 1 -->
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <span style="color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,0.4); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;" onmouseover="this.style.color='#fff'; this.style.textShadow='0 0 20px rgba(255,255,255,0.5)';" onmouseout="this.style.color='transparent'; this.style.textShadow='none';">Python</span>
+                                <span style="color: #a1c4fd; font-size: 2.5rem; opacity: 0.7;">✦</span>
+                                <span style="background: linear-gradient(135deg, #ffffff 0%, #a1c4fd 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AI / ML</span>
                             </div>
-                            <div>
-                                <div style="font-size: 1.8rem; font-weight: 700; color: #fff; font-family: 'Outfit';">1+</div>
-                                <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.2;">Years <br>Experience</div>
+                            
+                            <!-- Line 2 -->
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <span style="color: #fff;">React</span>
+                                <span style="color: rgba(255,255,255,0.2); font-size: 2.5rem;">✦</span>
+                                <span style="color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,0.4); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;" onmouseover="this.style.color='#fff'; this.style.textShadow='0 0 20px rgba(255,255,255,0.5)';" onmouseout="this.style.color='transparent'; this.style.textShadow='none';">Databases</span>
                             </div>
-                        </div>
 
-                        <div class="glass-card anim-tech-card" style="padding: 24px 20px; display: flex; align-items: center; gap: 18px; pointer-events: auto; animation-delay: 0.1s;">
-                            <div style="background: rgba(99, 102, 241, 0.15); padding: 14px; border-radius: 12px; color: #a1c4fd;">
-                                <!-- Code Icon -->
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/></svg>
+                            <!-- Line 3 -->
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <span style="background: linear-gradient(135deg, #818cf8 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">C++ // DSA</span>
+                                <span style="color: #a1c4fd; font-size: 2.5rem; opacity: 0.7;">✦</span>
+                                <span style="color: #fff;">FastAPI</span>
                             </div>
-                            <div>
-                                <div style="font-size: 1.8rem; font-weight: 700; color: #fff; font-family: 'Outfit';">20+</div>
-                                <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.2;">Projects <br>Completed</div>
-                            </div>
-                        </div>
 
-                        <div class="glass-card anim-tech-card" style="padding: 24px 20px; display: flex; align-items: center; gap: 18px; pointer-events: auto; animation-delay: 0.2s;">
-                            <div style="background: rgba(99, 102, 241, 0.15); padding: 14px; border-radius: 12px; color: #a1c4fd;">
-                                <!-- AI / Brain Icon -->
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4.5 4a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/><path d="M8 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-5 7a5 5 0 1 1 10 0v1a.5.5 0 0 1-1 0v-1a4 4 0 1 0-8 0v1a.5.5 0 0 1-1 0v-1z"/></svg>
-                            </div>
-                            <div>
-                                <div style="font-size: 1.8rem; font-weight: 700; color: #fff; font-family: 'Outfit';">5+</div>
-                                <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.2;">AI Models <br>Deployed</div>
-                            </div>
-                        </div>
-
-                        <div class="glass-card anim-tech-card" style="padding: 24px 20px; display: flex; align-items: center; gap: 18px; pointer-events: auto; animation-delay: 0.3s;">
-                            <div style="background: rgba(99, 102, 241, 0.15); padding: 14px; border-radius: 12px; color: #a1c4fd;">
-                                <!-- Trophy Icon -->
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5z"/></svg>
-                            </div>
-                            <div>
-                                <div style="font-size: 1.8rem; font-weight: 700; color: #fff; font-family: 'Outfit';">2</div>
-                                <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.2;">Hackathons <br>Won</div>
-                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 0 0 80px 0;">
-
-                <!-- Technical Stack Section (Progress bars style) -->
-                <div class="about-custom-text" style="text-align: center; margin-bottom: 60px; animation: fadeIn 1s ease-in-out;">
-                    <div style="color: #818cf8; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;">My Skills</div>
-                    <h2 style="font-size: 2.5rem; font-weight: 700; color: #fff; letter-spacing: -0.5px;">Technologies I Master</h2>
+            <!-- Scroll Down Indicator -->
+            <div style="position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 2; pointer-events: auto; opacity: 0.6;">
+                <div style="width: 20px; height: 32px; border: 2px solid rgba(255,255,255,0.4); border-radius: 12px; position: relative;">
+                    <div class="scroll-wheel" style="position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 3px; height: 5px; background: rgba(255,255,255,0.7); border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); animation: scrollAnim 1.5s infinite;"></div>
                 </div>
-
-                <div class="about-custom-text project-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
-                    
-                    <!-- Progress Item Card -->
-                    <div class="glass-card skill-card" style="padding: 24px; animation: fadeIn 0.6s ease-in-out forwards; animation-delay: 0.1s; opacity: 0; pointer-events: auto;">
-                        <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;">
-                            <span style="display: flex; align-items: center; gap: 12px;">
-                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(99, 102, 241, 0.15); border-radius: 8px; color: #a1c4fd; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(99, 102, 241, 0.2);">PY</span>
-                                Python
-                            </span>
-                            <span style="color: var(--text-muted); font-family: monospace; font-size: 1.1rem; align-self: center;">95%</span>
-                        </div>
-                        <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
-                            <div class="progress-fill shimmer-gradient" style="width: 95%; height: 100%; border-radius: 8px;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Progress Item Card -->
-                    <div class="glass-card skill-card" style="padding: 24px; animation: fadeIn 0.6s ease-in-out forwards; animation-delay: 0.2s; opacity: 0; pointer-events: auto;">
-                        <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;">
-                            <span style="display: flex; align-items: center; gap: 12px;">
-                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(99, 102, 241, 0.15); border-radius: 8px; color: #a1c4fd; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(99, 102, 241, 0.2);">AI</span>
-                                TensorFlow / ML
-                            </span>
-                            <span style="color: var(--text-muted); font-family: monospace; font-size: 1.1rem; align-self: center;">85%</span>
-                        </div>
-                        <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
-                            <div class="progress-fill shimmer-gradient" style="width: 85%; height: 100%; border-radius: 8px;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Progress Item Card -->
-                    <div class="glass-card skill-card" style="padding: 24px; animation: fadeIn 0.6s ease-in-out forwards; animation-delay: 0.3s; opacity: 0; pointer-events: auto;">
-                        <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;">
-                            <span style="display: flex; align-items: center; gap: 12px;">
-                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(99, 102, 241, 0.15); border-radius: 8px; color: #a1c4fd; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(99, 102, 241, 0.2);">DB</span>
-                                SQL / Data Science
-                            </span>
-                            <span style="color: var(--text-muted); font-family: monospace; font-size: 1.1rem; align-self: center;">90%</span>
-                        </div>
-                        <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
-                            <div class="progress-fill shimmer-gradient" style="width: 90%; height: 100%; border-radius: 8px;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Progress Item Card -->
-                    <div class="glass-card skill-card" style="padding: 24px; animation: fadeIn 0.6s ease-in-out forwards; animation-delay: 0.4s; opacity: 0; pointer-events: auto;">
-                        <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;">
-                            <span style="display: flex; align-items: center; gap: 12px;">
-                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(99, 102, 241, 0.15); border-radius: 8px; color: #a1c4fd; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(99, 102, 241, 0.2);">JS</span>
-                                React / Web
-                            </span>
-                            <span style="color: var(--text-muted); font-family: monospace; font-size: 1.1rem; align-self: center;">80%</span>
-                        </div>
-                        <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
-                            <div class="progress-fill shimmer-gradient" style="width: 80%; height: 100%; border-radius: 8px;"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Progress Item Card -->
-                    <div class="glass-card skill-card" style="padding: 24px; animation: fadeIn 0.6s ease-in-out forwards; animation-delay: 0.5s; opacity: 0; pointer-events: auto;">
-                        <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;">
-                            <span style="display: flex; align-items: center; gap: 12px;">
-                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(99, 102, 241, 0.15); border-radius: 8px; color: #a1c4fd; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(99, 102, 241, 0.2);">C++</span>
-                                C++ / Java / DSA
-                            </span>
-                            <span style="color: var(--text-muted); font-family: monospace; font-size: 1.1rem; align-self: center;">85%</span>
-                        </div>
-                        <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
-                            <div class="progress-fill shimmer-gradient" style="width: 85%; height: 100%; border-radius: 8px;"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Progress Item Card -->
-                    <div class="glass-card skill-card" style="padding: 24px; animation: fadeIn 0.6s ease-in-out forwards; animation-delay: 0.6s; opacity: 0; pointer-events: auto;">
-                        <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;">
-                            <span style="display: flex; align-items: center; gap: 12px;">
-                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(99, 102, 241, 0.15); border-radius: 8px; color: #a1c4fd; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(99, 102, 241, 0.2);">BK</span>
-                                FastAPI / REST
-                            </span>
-                            <span style="color: var(--text-muted); font-family: monospace; font-size: 1.1rem; align-self: center;">80%</span>
-                        </div>
-                        <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
-                            <div class="progress-fill shimmer-gradient" style="width: 80%; height: 100%; border-radius: 8px;"></div>
-                        </div>
-                    </div>
-
-                </div>
+                <span style="font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); font-family: 'Outfit', sans-serif;">Scroll Down</span>
+            </div>
+            
+            <style>
+                @keyframes scrollAnim {
+                    0% { top: 6px; opacity: 1; }
+                    100% { top: 20px; opacity: 0; }
+                }
+            </style>
             </div>
         </div>
 
@@ -259,77 +167,432 @@
                 </div>
                 
                 <div class="project-grid">
-                    <!-- Project Card 1 -->
-                    <div class="glass-card group">
+                    
+                    <!-- 1. AGRONEON AI -->
+                    <div class="glass-card group" onclick="openModal('modal-agroneon')">
                         <div class="card-graphic">
-                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80" alt="AI Interface">
-                            <div class="hover-overlay">
-                                <span class="explore-btn">Explore ↗</span>
-                            </div>
+                            <img src="agroneon.png" alt="AGRONEON AI">
+                            <div class="hover-overlay"><span class="explore-btn">View Details ↗</span></div>
                         </div>
                         <div class="card-info">
-                            <div class="badge-container">
-                                <span class="glass-badge">LLMs</span>
-                                <span class="glass-badge">Python</span>
+                            <span class="status-badge status-gold">SIH 2026 — Nominated</span>
+                            <h3 class="card-title">AGRONEON AI</h3>
+                            <p class="card-desc">An AI-powered smart farming platform providing explainable crop recommendations, disease diagnostics, and farm economics.</p>
+                            <div class="badge-container" style="flex-wrap: wrap;">
+                                <span class="glass-badge">AI</span><span class="glass-badge">Python</span><span class="glass-badge">React</span><span class="glass-badge">PostgreSQL</span>
                             </div>
-                            <h3 class="card-title">Nexus Synthesizer</h3>
-                            <p class="card-desc">An autonomous reasoning agent designed to seamlessly orchestrate complex workflows across multiple APIs with zero-shot prompting.</p>
+                            <div class="project-actions">
+                                <a href="javascript:void(0)" class="btn-action btn-primary-action">Detailed View</a>
+                                <a href="https://github.com/SujanS-B-Tech/AGRINEON-AI-SIH-Abstract" target="_blank" class="btn-action" onclick="event.stopPropagation()">GitHub ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. DayFlow -->
+                    <div class="glass-card group" onclick="openModal('modal-dayflow')">
+                        <div class="card-graphic">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="DayFlow">
+                            <div class="hover-overlay"><span class="explore-btn">View Details ↗</span></div>
+                        </div>
+                        <div class="card-info">
+                            <span class="status-badge status-gold">Hackathon '26 Winner</span>
+                            <h3 class="card-title">DayFlow</h3>
+                            <p class="card-desc">A centralized Human Resource Management platform developed for seamless attendance, payroll logistics, and admin control.</p>
+                            <div class="badge-container" style="flex-wrap: wrap;">
+                                <span class="glass-badge">FastAPI</span><span class="glass-badge">React</span><span class="glass-badge">Vite</span><span class="glass-badge">PostgreSQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="javascript:void(0)" class="btn-action btn-primary-action">Detailed View</a>
+                                <a href="https://github.com/SujanS-B-Tech/odoo-hackathon-2026-Tech-Neon" target="_blank" class="btn-action" onclick="event.stopPropagation()">GitHub ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. SafeRoute AI -->
+                    <div class="glass-card group" onclick="openModal('modal-saferoute')">
+                        <div class="card-graphic">
+                            <img src="saferoute ai.png" alt="SafeRoute AI">
+                            <div class="hover-overlay"><span class="explore-btn">View Details ↗</span></div>
+                        </div>
+                        <div class="card-info">
+                            <span class="status-badge status-blue">Phase 1 Prototype</span>
+                            <h3 class="card-title">SafeRoute AI</h3>
+                            <p class="card-desc">An AI-assisted navigation platform that evaluates routes using safety-related indicators for enhanced travel awareness.</p>
+                            <div class="badge-container" style="flex-wrap: wrap;">
+                                <span class="glass-badge">AI Auth</span><span class="glass-badge">Navigation</span><span class="glass-badge">Data Analysis</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="javascript:void(0)" class="btn-action btn-primary-action">Detailed View</a>
+                                <a href="https://github.com/SujanS-B-Tech/saferoute-ai" target="_blank" class="btn-action" onclick="event.stopPropagation()">GitHub ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. AI Telehealth -->
+                    <div class="glass-card group" onclick="openModal('modal-telehealth')">
+                        <div class="card-graphic">
+                            <img src="healthcare.jpg" alt="AI Telehealth">
+                            <div class="hover-overlay"><span class="explore-btn">View Details ↗</span></div>
+                        </div>
+                        <div class="card-info">
+                            <span class="status-badge status-purple">Healthcare Tech</span>
+                            <h3 class="card-title">AI Telehealth</h3>
+                            <p class="card-desc">Browser-based healthcare environment offering real-time facial emotion recognition, speech analysis, and dynamic tracking.</p>
+                            <div class="badge-container" style="flex-wrap: wrap;">
+                                <span class="glass-badge">TensorFlow.js</span><span class="glass-badge">MediaPipe</span><span class="glass-badge">NLP</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="javascript:void(0)" class="btn-action btn-primary-action">Detailed View</a>
+                                <a href="https://github.com/SujanS-B-Tech/AI-Telehealth-Platform" target="_blank" class="btn-action" onclick="event.stopPropagation()">GitHub ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. SEVASAKSHI -->
+                    <div class="glass-card group" onclick="openModal('modal-sevasakshi')">
+                        <div class="card-graphic">
+                            <img src="smartinspect.png" alt="SEVASAKSHI">
+                            <div class="hover-overlay"><span class="explore-btn">View Details ↗</span></div>
+                        </div>
+                        <div class="card-info">
+                            <span class="status-badge status-purple">GovTech Concept</span>
+                            <h3 class="card-title">SEVASAKSHI</h3>
+                            <p class="card-desc">An AI-powered mobile app designed to upgrade NGO tracking with geo-tagged evidence, AI liveness verification, and offline syncing.</p>
+                            <div class="badge-container" style="flex-wrap: wrap;">
+                                <span class="glass-badge">Flutter</span><span class="glass-badge">PostGIS</span><span class="glass-badge">YOLOv8</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="javascript:void(0)" class="btn-action btn-primary-action">Detailed View</a>
+                                <a href="https://github.com/SujanS-B-Tech/SMART-INSPECTION-SEVASAKSHI" target="_blank" class="btn-action" onclick="event.stopPropagation()">GitHub ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. SATYARANG -->
+                    <div class="glass-card group" onclick="openModal('modal-satyarang')">
+                        <div class="card-graphic">
+                            <img src="SIH2026_SATYARANG.pptx.png" alt="SATYARANG">
+                            <div class="hover-overlay"><span class="explore-btn">View Details ↗</span></div>
+                        </div>
+                        <div class="card-info">
+                            <span class="status-badge status-purple">SIH26231 Concept</span>
+                            <h3 class="card-title">SATYARANG</h3>
+                            <p class="card-desc">AI-assisted digital platform supporting field officers via consistent mobile color-based drug analysis and secure tamper-evident hashing.</p>
+                            <div class="badge-container" style="flex-wrap: wrap;">
+                                <span class="glass-badge">Computer Vision</span><span class="glass-badge">Node.js</span><span class="glass-badge">SHA-256</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="javascript:void(0)" class="btn-action btn-primary-action">Detailed View</a>
+                                <a href="https://github.com/SujanS-B-Tech/DRUG-TESTING" target="_blank" class="btn-action" onclick="event.stopPropagation()">GitHub ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-certifications" class="tab-content" style="padding-top: 10vh; pointer-events: auto;">
+            <div class="premium-project-layout" style="margin-top: 0;">
+                <div class="premium-header" style="margin-bottom: 30px;">
+                    <h2 class="gradient-title" style="font-size: 3rem;">Credentials & Certifications</h2>
+                    <p class="premium-subtitle">Verified credentials in Artificial Intelligence, Machine Learning, Data Analytics, and Full-Stack Development from global tech institutions.</p>
+                </div>
+                
+                <div class="cert-grid-wrapper" style="max-height: 60vh; overflow-y: auto; padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.3);">
+                    <div class="cert-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+                        <img src="./certification/OneDrive_1_06-10-2026/AI%20fundamental%20oxfords.png" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/ARTIFICIAL%20INTILIGENCE%20%28INFOSYSSPRINGBOARD%29.jpeg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/BASIS%20OF%20PYTHON%20%28INFOSYS%29.jpeg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/GOOGLE%20DATA%20ANALYTICS.png" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/Google%20ai.png" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/INFOSYS%20AI%20FOUNDATION%20ACHIEVEMENT%20CERTIFICATE.png" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/INTERNSHIP%2026.jpeg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/INTRODUCTION%20TO%20ARTIFICIAL%20INTELLIGENCE%20%28INFOSYS%29.jpeg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/INTRODUCTION%20TO%20DATA%20SCIENCE%20.jpeg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/INTRODUCTION%20TO%20DEEP%20LEARNING%20%28INFOSYS%29.jpeg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/INTRODUCTION%20TO%20LANGUAGE%20PROCESSING%20.jpeg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/JOB%20SEARCH%20WITH%20AI.png" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/KJ%202K26.jpeg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/MICROSOFT%20AIML.png" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/Udemy%20ai%20learning%20.jpeg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/generative%20ai%20university.png" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/guvi%20certification.png" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/infosys.jpeg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/internshala%20selection.jpeg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/mind%20luster.jpg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/nextsync.jpeg" class="cert-card-img" alt="Cert">
+                        <img src="./certification/OneDrive_1_06-10-2026/udemy%20HR.jpeg" class="cert-card-img" alt="Cert">
+                    </div>
+                </div>
+                
+                <style>
+                    .cert-card-img {
+                        width: 100%;
+                        aspect-ratio: 4/3;
+                        object-fit: contain;
+                        background: rgba(255,255,255,0.02);
+                        border: 1px solid rgba(255,255,255,0.1);
+                        border-radius: 8px;
+                        transition: transform 0.3s, border-color 0.3s;
+                        cursor: crosshair;
+                    }
+                    .cert-card-img:hover {
+                        transform: scale(1.05);
+                        border-color: rgba(161, 196, 253, 0.5);
+                    }
+                    .cert-grid-wrapper::-webkit-scrollbar { width: 8px; }
+                    .cert-grid-wrapper::-webkit-scrollbar-track { background: transparent; }
+                    .cert-grid-wrapper::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 4px; }
+                    .cert-grid-wrapper::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.4); }
+                </style>
+            </div>
+        </div>
+
+        <div id="tab-contact" class="tab-content" style="overflow-y: auto; pointer-events: auto; height: 100vh;">
+            <div class="premium-project-layout" style="margin-top: 10vh; max-width: 1200px; margin-left: auto; margin-right: auto; padding-right: 40px; padding-left: 20px; position: relative;">
+                
+                <div class="ambient-glow glow-blue"></div>
+                <div class="ambient-glow glow-purple" style="top: 20%; right: 10%; bottom: auto; left: auto;"></div>
+
+                <div style="display: flex; gap: 60px; align-items: center; flex-wrap: wrap;">
+                    
+                    <div style="flex: 1.2; min-width: 320px; animation: fadeIn 0.8s ease-in-out;">
+                        <div style="color: #a1c4fd; font-size: 0.95rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">
+                            <span style="display:inline-block; width: 40px; border-top: 2px solid #a1c4fd; margin-bottom: 5px; margin-right: 15px;"></span>
+                            Get In Touch
+                        </div>
+                        <h1 style="font-size: 4.5rem; font-family: 'Inter', sans-serif; font-weight: 900; line-height: 1.1; margin-bottom: 30px; letter-spacing: -1.5px; color: #fff;">
+                            Let's take your <span style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ideas</span> to the next level together.
+                        </h1>
+                        <p style="font-size: 1.2rem; color: var(--text-muted); line-height: 1.7; max-width: 90%; margin-bottom: 40px; font-weight: 300;">
+                            Hi, I'm Sujan, an AI & Data Science Developer. I bridge the gap between human creativity and artificial intelligence to build the future.
+                        </p>
+
+                        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px;">
+                            <a href="mailto:sujannotagain@gmail.com" class="btn-primary-about" style="padding: 16px 36px; font-size: 1.1rem; font-weight: 600; border-radius: 12px; color: #fff; background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.6); text-decoration: none; display: inline-flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                                Contact me
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/></svg>
+                            </a>
+                            
+                            <a href="#tab-project" onclick="document.querySelector('a[href=\'#tab-project\']').click()" style="padding: 16px 36px; font-size: 1.1rem; font-weight: 600; border-radius: 12px; color: #fff; background: transparent; border: 1px solid rgba(255, 255, 255, 0.3); text-decoration: none; display: inline-flex; align-items: center; gap: 12px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.6)';" onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.3)';">
+                                See my work
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                            </a>
+                        </div>
+
+                        <div style="display: flex; gap: 40px; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; flex-wrap: wrap;">
+                            <div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">GitHub</div>
+                                <a href="https://github.com/SujanS-B-Tech" target="_blank" style="color: #fff; text-decoration: none; font-size: 1.1rem; font-weight: 500; display:flex; align-items:center; gap:8px;">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>    
+                                    SujanS-B-Tech
+                                </a>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">LinkedIn</div>
+                                <a href="https://linkedin.com/in/sujans-b-tech" target="_blank" style="color: #fff; text-decoration: none; font-size: 1.1rem; font-weight: 500; display:flex; align-items:center; gap:8px;">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>    
+                                    sujans-b-tech
+                                </a>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">LeetCode</div>
+                                <a href="https://leetcode.com/SujanS_B-Tech" target="_blank" style="color: #fff; text-decoration: none; font-size: 1.1rem; font-weight: 500; display:flex; align-items:center; gap:8px;">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/></svg>    
+                                    SujanS_B-Tech
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="flex: 1; min-width: 320px; display: flex; justify-content: center; position: relative; animation: fadeIn 1s ease-in-out;">
+                        <div style="position: absolute; width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 65%); z-index: -1;"></div>
+                        
+                        <div class="glass-card" style="padding: 24px; border-radius: 36px; transform: scale(1); transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); width: 85%; max-width: 420px; border: 1px solid rgba(255,255,255,0.15);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                            <img src="Contact.png" alt="Sujan Avatar" style="width: 100%; height: auto; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); object-fit: cover; aspect-ratio: 4/5;">
+                            <div style="margin-top: 25px; text-align: center;">
+                                <h3 style="font-size: 1.8rem; margin-bottom: 5px; font-weight: 800; font-family: 'Outfit', sans-serif;">Sujan</h3>
+                                <p style="color: #a1c4fd; margin: 0; font-size: 1.05rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">AI Engineer</p>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- Project Card 2 -->
-                    <div class="glass-card group">
-                        <div class="card-graphic">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Analytics Graph">
-                            <div class="hover-overlay">
-                                <span class="explore-btn">Explore ↗</span>
-                            </div>
-                        </div>
-                        <div class="card-info">
-                            <div class="badge-container">
-                                <span class="glass-badge">Computer Vision</span>
-                                <span class="glass-badge">PyTorch</span>
-                            </div>
-                            <h3 class="card-title">Vision Cortex API</h3>
-                            <p class="card-desc">Real-time deep learning pipeline for object tracking and pose estimation, specifically optimized for extremely low-latency edge deployment.</p>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 3 -->
-                    <div class="glass-card group">
-                        <div class="card-graphic">
-                            <img src="https://images.unsplash.com/photo-1618477247222-ac60c49749ef?auto=format&fit=crop&w=600&q=80" alt="Code System">
-                            <div class="hover-overlay">
-                                <span class="explore-btn">Explore ↗</span>
-                            </div>
-                        </div>
-                        <div class="card-info">
-                            <div class="badge-container">
-                                <span class="glass-badge">Deep Learning</span>
-                                <span class="glass-badge">TensorFlow</span>
-                            </div>
-                            <h3 class="card-title">Predictive Core</h3>
-                            <p class="card-desc">Scalable neural network architecture forecasting temporal market fluctuations based on diverse unstructured data streams.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-
-        <div id="tab-certifications" class="tab-content">
-            <div class="hero-content">
-                <div class="hero-left-col">
-                    <h1 class="main-title" style="font-size: 5vw;">CERTIFICATIONS</h1>
-                    <p class="left-desc" style="margin-top: 2rem;">Certified in Advanced ML, Cloud Architecture, and Data Science tools.</p>
+    </div>
+    <!-- MODAL OVERLAYS -->
+    <!-- 1. AGRONEON AI -->
+    <div id="modal-agroneon" class="modal-overlay" onclick="closeModal(event, 'modal-agroneon')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-close" onclick="closeModal(null, 'modal-agroneon')">×</div>
+            <div class="modal-header">
+                <span class="status-badge status-gold">SIH 2026 — Nominated</span>
+                <h2 class="modal-title">AGRONEON AI</h2>
+                <h3 class="modal-subtitle">Explainable AI for Smart Farming</h3>
+            </div>
+            <div class="modal-body">
+                <p>AGRONEON AI is a smart agriculture platform focused on making Artificial Intelligence more accessible and useful for farmers. The platform combines agricultural data, AI-driven recommendations, market information, disease diagnostics, farm economics, and conversational assistance into a unified system.</p>
+                <p>Instead of providing recommendations without context, the platform focuses on explainable recommendations that help farmers understand why a particular action or crop decision is suggested. The system includes crop advisory features, agricultural economics calculations, disease diagnosis assistance, market intelligence, and an AI voice/chat assistant.</p>
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Explainable AI-based crop recommendations & agricultural advisory</li>
+                    <li>Disease diagnosis assistance & market intelligence</li>
+                    <li>Farm economics, profit estimation, seed/fertilizer/labour calculations</li>
+                    <li>AI voice/chat assistant with personalized insights</li>
+                    <li>Secure authentication & persistent PostgreSQL database backend</li>
+                </ul>
+                <h4>Tech Stack</h4>
+                <p><strong>Frontend:</strong> React.js, modern web tech<br><strong>Backend:</strong> Python, FastAPI, SQLAlchemy ORM<br><strong>Database:</strong> PostgreSQL<br><strong>Auth:</strong> JWT</p>
+                <div class="project-actions" style="margin-top:40px;">
+                    <a href="#" class="btn-action btn-primary-action">View Live Demo</a>
+                    <a href="https://github.com/SujanS-B-Tech/AGRINEON-AI-SIH-Abstract" target="_blank" class="btn-action">Source Code (GitHub)</a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div id="tab-contact" class="tab-content">
-            <div class="hero-content">
-                <div class="hero-left-col">
-                    <h1 class="main-title" style="font-size: 5vw;">CONTACT</h1>
-                    <p class="left-desc" style="margin-top: 2rem;">Let's build something amazing together!</p>
+    <!-- 2. DayFlow -->
+    <div id="modal-dayflow" class="modal-overlay" onclick="closeModal(event, 'modal-dayflow')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-close" onclick="closeModal(null, 'modal-dayflow')">×</div>
+            <div class="modal-header">
+                <span class="status-badge status-gold">Odoo x NMIT Bangalore Hackathon 2026</span>
+                <h2 class="modal-title">DayFlow</h2>
+                <h3 class="modal-subtitle">Human Resource Management System</h3>
+            </div>
+            <div class="modal-body">
+                <p>DayFlow is a centralized HRMS developed rapidly during the Odoo x NMIT Bangalore Hackathon 2026. It brings employee management, attendance tracking, leave applications, payroll, notifications, and administrative dashboards into a single, unified digital platform.</p>
+                <p>The system provides dual-role access. Employees check in/out and track leave, while administrators monitor attendance and manage payroll. As Team Lead and Database Developer for Team Tech Neon, I designed and managed the PostgreSQL architecture and its integration with the backend.</p>
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Role-based dual access (Employees & Administrators)</li>
+                    <li>Real-time Check-in / Check-out attendance tracking</li>
+                    <li>Leave application and multi-stage approval workflow</li>
+                    <li>Comprehensive dashboards, reporting, and payroll integration</li>
+                </ul>
+                <h4>Tech Stack</h4>
+                <p><strong>Frontend:</strong> React.js, Vite, Tailwind CSS, Axios<br><strong>Backend:</strong> Python, FastAPI, JWT<br><strong>Database:</strong> PostgreSQL</p>
+                <div class="project-actions" style="margin-top:40px;">
+                    <a href="#" class="btn-action btn-primary-action">View Live Demo</a>
+                    <a href="https://github.com/SujanS-B-Tech/odoo-hackathon-2026-Tech-Neon" target="_blank" class="btn-action">Source Code (GitHub)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. SafeRoute AI -->
+    <div id="modal-saferoute" class="modal-overlay" onclick="closeModal(event, 'modal-saferoute')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-close" onclick="closeModal(null, 'modal-saferoute')">×</div>
+            <div class="modal-header">
+                <span class="status-badge status-blue">Phase 1 Prototype</span>
+                <h2 class="modal-title">SafeRoute AI</h2>
+                <h3 class="modal-subtitle">AI-Assisted Safety Navigation</h3>
+            </div>
+            <div class="modal-body">
+                <p>SafeRoute AI is an AI-assisted, evidence-aware navigation platform designed to help users make more informed travel decisions by evaluating routes using safety-related indicators alongside conventional navigation metrics.</p>
+                <p>Developed in collaboration with Sathiya Shalini, this platform introduces dynamic route scoring and data confidence indicators. I served as the Developer, contributing to the full-stack architecture, route evaluation framework, privacy-centric design, and security layers.</p>
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Dynamic route scoring and evidence-aware safety assessment</li>
+                    <li>Interactive map interface and highly-visualized route reporting</li>
+                    <li>Privacy-focused system architecture avoiding unneeded data exposure</li>
+                    <li>Data confidence metrics for evaluated pathways</li>
+                </ul>
+                <h4>Tech Stack</h4>
+                <p><strong>Frontend/Backend:</strong> Full-Stack application architecture<br><strong>Core:</strong> Route Evaluation Framework, Custom Algorithms<br><strong>Security:</strong> Secure Authentication & Privacy Models</p>
+                <div class="project-actions" style="margin-top:40px;">
+                    <a href="#" class="btn-action btn-primary-action">View Live Demo</a>
+                    <a href="https://github.com/SujanS-B-Tech/saferoute-ai" target="_blank" class="btn-action">Source Code (GitHub)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. AI Telehealth -->
+    <div id="modal-telehealth" class="modal-overlay" onclick="closeModal(event, 'modal-telehealth')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-close" onclick="closeModal(null, 'modal-telehealth')">×</div>
+            <div class="modal-header">
+                <span class="status-badge status-purple">AI / Healthcare / CV / NLP</span>
+                <h2 class="modal-title">AI Telehealth</h2>
+                <h3 class="modal-subtitle">Intelligent Healthcare Assistant</h3>
+            </div>
+            <div class="modal-body">
+                <p>AI Telehealth is a browser-based intelligent platform combining AI, computer vision, and speech analysis to support patients and doctors. Features include an AI-powered health assistant, emotion monitoring, and an interactive symptom checker.</p>
+                <p>The system utilizes live facial emotion recognition (via TensorFlow.js & MediaPipe) tracking happiness, sadness, anger, fear, and neutral expressions. Paired with Web Speech API pattern analysis, it monitors emotional distress indicators, logging them seamlessly into a mood journal.</p>
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Real-time browser facial emotion & speech pattern analysis</li>
+                    <li>AI-based conversational symptom checker & diagnosis suggestions</li>
+                    <li>Mood journal & emotional tracking timelines</li>
+                    <li>Dedicated Patient and Doctor portal dashboards</li>
+                </ul>
+                <h4>Tech Stack</h4>
+                <p><strong>AI/CV:</strong> TensorFlow.js, MediaPipe, Web Speech API<br><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6)<br><strong>Storage:</strong> LocalStorage, SessionStorage</p>
+                <div class="project-actions" style="margin-top:40px;">
+                    <a href="#" class="btn-action btn-primary-action">View Live Demo</a>
+                    <a href="https://github.com/SujanS-B-Tech/AI-Telehealth-Platform" target="_blank" class="btn-action">Source Code (GitHub)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. SEVASAKSHI -->
+    <div id="modal-sevasakshi" class="modal-overlay" onclick="closeModal(event, 'modal-sevasakshi')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-close" onclick="closeModal(null, 'modal-sevasakshi')">×</div>
+            <div class="modal-header">
+                <span class="status-badge status-purple">GovTech / SIH26095</span>
+                <h2 class="modal-title">SEVASAKSHI</h2>
+                <h3 class="modal-subtitle">Smart NGO Inspection & Monitoring Platform</h3>
+            </div>
+            <div class="modal-body">
+                <p>SEVASAKSHI is an AI-powered mobile and web platform designed to digitize NGO inspection for the Department of Social Justice & Empowerment (DoSJE). It replaces traditional paper-based auditing with a mobile, evidence-driven, geo-tagged digital workflow.</p>
+                <p>Field inspectors can utilize the offline-first app to capture timestamped photos, fill dynamic checklists, and sync data when networking restores. Crucially, an AI verification layer running YOLOv8 checks face liveness, duplication, and anomalies against submissions.</p>
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Offline-first mobile operation & automated sync workflows</li>
+                    <li>Geo-tagged, timestamped photo evidence verification</li>
+                    <li>AI processing: Face liveness, duplicate detection, anomaly flagging</li>
+                    <li>Centralized PMU web dashboard for audit tracking & analytics</li>
+                </ul>
+                <h4>Tech Stack</h4>
+                <p><strong>Mobile:</strong> Flutter<br><strong>Web:</strong> React.js, Tailwind CSS<br><strong>Backend:</strong> FastAPI, PostgreSQL, PostGIS, Redis<br><strong>AI/ML:</strong> YOLOv8, OpenCV, TensorFlow Lite<br><strong>Security:</strong> AES-256, TLS 1.3, JWT</p>
+                <div class="project-actions" style="margin-top:40px;">
+                    <a href="#" class="btn-action btn-primary-action">View Concept</a>
+                    <a href="https://github.com/SujanS-B-Tech/SMART-INSPECTION-SEVASAKSHI" target="_blank" class="btn-action">Source Code (GitHub)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. SATYARANG -->
+    <div id="modal-satyarang" class="modal-overlay" onclick="closeModal(event, 'modal-satyarang')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-close" onclick="closeModal(null, 'modal-satyarang')">×</div>
+            <div class="modal-header">
+                <span class="status-badge status-purple">Public Safety / SIH26231</span>
+                <h2 class="modal-title">SATYARANG</h2>
+                <h3 class="modal-subtitle">Digital Companion for Field Drug Testing</h3>
+            </div>
+            <div class="modal-body">
+                <p>SATYARANG is an AI-assisted digital platform designed for the Narcotics Control Bureau. It aids field officers in conducting presumptive drug testing by using smartphone cameras to perform consistent color-reagent analysis regardless of variable lighting conditions.</p>
+                <p>The system uses HSV color-space normalization mapped to a predefined reaction matrix to identify substances and assign confidence scores. Crucially, each test produces a secure digital evidence certificate utilizing SHA-256 hashing to guarantee a tamper-evident chain of custody directly from the field.</p>
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Offline-first smartphone presumptive color-reaction analysis</li>
+                    <li>HSV-based image normalization and classification scoring</li>
+                    <li>SHA-256 tamper-evident digital evidence certificate generation</li>
+                    <li>GPS, timestamp, and officer identification logging</li>
+                </ul>
+                <h4>Tech Stack</h4>
+                <p><strong>Frontend:</strong> HTML5, Tailwind CSS, JavaScript (ES6+)<br><strong>Backend:</strong> Node.js, Express.js<br><strong>AI / Security:</strong> HSV Classification, Crypto-JS SHA-256</p>
+                <div class="project-actions" style="margin-top:40px;">
+                    <a href="#" class="btn-action btn-primary-action">View Concept</a>
+                    <a href="https://github.com/SujanS-B-Tech/DRUG-TESTING" target="_blank" class="btn-action">Source Code (GitHub)</a>
                 </div>
             </div>
         </div>

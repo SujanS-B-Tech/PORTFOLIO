@@ -82,27 +82,82 @@ window.addEventListener('scroll', () => {
   );
 });
 
-// Tab Navigation Logic
+// Smooth Scrolling Navigation Logic
 const navLinks = document.querySelectorAll('#main-nav a');
 const tabContents = document.querySelectorAll('.tab-content');
 
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
-        
-        // Remove active class from all links and tabs
-        navLinks.forEach(l => l.classList.remove('active'));
-        tabContents.forEach(tab => tab.classList.remove('active-tab'));
-        
-        // Add active class to clicked link
-        link.classList.add('active');
-        
-        // Find target id from href (e.g. #tab-home -> tab-home)
         const targetId = link.getAttribute('href').substring(1);
         const targetTab = document.getElementById(targetId);
         
         if(targetTab) {
-            targetTab.classList.add('active-tab');
+            targetTab.scrollIntoView({ behavior: 'smooth' });
         }
     });
+});
+
+// Update active navigation link based on scroll position
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // trigger when 50% of the section is visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === entry.target.id) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+}, observerOptions);
+
+tabContents.forEach(tab => observer.observe(tab));
+
+// ==========================================
+// MODAL SYSTEM LOGIC
+// ==========================================
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    
+    // Show modal
+    modal.classList.add('active');
+    
+    // Prevent background scrolling
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(event, modalId) {
+    // If event exists, ensure we didn't click inside the modal-content
+    if (event) {
+        // Prevent closing if clicking on the actual content box, only close on overlay or 'x'
+        if (event.target.classList.contains('modal-content') || event.target.closest('.modal-content') && !event.target.classList.contains('modal-close')) {
+            return;
+        }
+    }
+    
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('active');
+    }
+    
+    // Restore background scrolling
+    document.body.style.overflow = '';
+}
+
+// Global ESC key listener to close active modal
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const activeModal = document.querySelector('.modal-overlay.active');
+        if (activeModal) {
+            closeModal(null, activeModal.id);
+        }
+    }
 });

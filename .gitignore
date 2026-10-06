@@ -1,1 +1,14 @@
 photos/
+certification/
+
+# Ignore image files
+*.jpg
+*.jpeg
+*.png
+*.svg
+*.gif
+*.webp
+
+# Ignore documents and resumes
+*.pdf
+Sujan_S_Resume_OnePage.pdf

@@ -5,7 +5,7 @@ const path = require('path');
 const PORT = 3000;
 
 http.createServer((req, res) => {
-    let filePath = '.' + req.url;
+    let filePath = '.' + decodeURI(req.url);
     if (filePath == './') {
         filePath = './index.html';
     }
@@ -26,7 +26,8 @@ http.createServer((req, res) => {
         '.ttf': 'application/font-ttf',
         '.eot': 'application/vnd.ms-fontobject',
         '.otf': 'application/font-otf',
-        '.wasm': 'application/wasm'
+        '.wasm': 'application/wasm',
+        '.pdf': 'application/pdf'
     };
 
     const contentType = mimeTypes[extname] || 'application/octet-stream';
@@ -41,7 +42,11 @@ http.createServer((req, res) => {
                 res.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
             }
         } else {
-            res.writeHead(200, { 'Content-Type': contentType });
+            let headers = { 'Content-Type': contentType };
+            if (extname === '.pdf') {
+                headers['Content-Disposition'] = 'inline';
+            }
+            res.writeHead(200, headers);
             res.end(content, 'utf-8');
         }
     });
