@@ -33,6 +33,7 @@
                 <a href="#tab-home" class="active">Home</a>
                 <a href="#tab-about">About</a>
                 <a href="#tab-project">Project</a>
+                <a href="#tab-events">Events</a>
                 <a href="#tab-certifications">Certifications </a>
                 <a href="#tab-contact">Contact</a>
             </nav>
@@ -288,6 +289,90 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-events" class="tab-content">
+            <div class="premium-project-layout">
+                <div class="premium-header">
+                    <h2 class="gradient-title">Events & Milestones</h2>
+                    <p class="premium-subtitle">Showcasing hackathon experiences, project presentations, and continuous building journeys.</p>
+                </div>
+                
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Event 1 (XACTITUDE) -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot glow-blue"></div>
+                        <div class="timeline-content glass-card group" onclick="openModal('modal-xactitude-gallery')" style="cursor: pointer;">
+                            <div class="card-graphic timeline-img" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; position: relative; background: rgba(0,0,0,0.5);">
+                                <img src="KJ/KJ.jpeg" style="width: 100%; height: 100%; object-fit: cover;" alt="XACTITUDE Highlight 1">
+                                <img src="KJ/4.png" style="width: 100%; height: 100%; object-fit: cover;" alt="XACTITUDE Highlight 2">
+                                <div class="hover-overlay"><span class="explore-btn">View Gallery ↗</span></div>
+                            </div>
+                            <div class="card-info">
+                                <span class="status-badge status-blue">2nd Round Selection</span>
+                                <h3 class="card-title">XACTITUDE 2026 — 24-Hour Hackathon</h3>
+                                <p style="font-size: 0.8rem; font-weight: 600; color: #a1c4fd; margin-bottom: 15px; margin-top: -5px;">Kristu Jayanti (Deemed to be University), Bengaluru</p>
+                                <p class="card-desc" style="font-size: 0.8rem; margin-bottom: 15px;">Participated in the 24-hour XACTITUDE 2026 Hackathon as a member of <strong>Team TECH NEON</strong>, where we developed <strong>Tele AI Health Assistant</strong>, an AI-powered solution in the Healthcare & HealthTech domain.</p>
+                                <p class="card-desc" style="font-size: 0.8rem; margin-bottom: 15px;">The hackathon challenged us to develop and present a working solution within 24 hours, strengthening our skills in Artificial Intelligence, rapid development, teamwork, problem-solving, and technical presentation.</p>
+                                <div style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px; border-left: 2px solid #3b82f6;">
+                                    <div style="font-size: 0.8rem; color: #fff;">🏆 <strong>Achievement:</strong> Selected for the 2nd Round and received positive feedback from the judges.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Event 2 (Odoo x NMIT) -->
+                    <div class="timeline-item right">
+                        <div class="timeline-dot glow-purple"></div>
+                        <div class="timeline-content glass-card group" onclick="openModal('modal-odoo-gallery')" style="cursor: pointer;">
+                            <div class="card-graphic timeline-img" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; position: relative; background: rgba(0,0,0,0.5);">
+                                <img src="odoo/WhatsApp Image 2026-10-07 at 2.06.37 PM.jpeg" style="width: 100%; height: 100%; object-fit: cover;" alt="Odoo Highlight">
+                                <video src="odoo/3.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
+                                <div class="hover-overlay"><span class="explore-btn">View Gallery ↗</span></div>
+                            </div>
+                            <div class="card-info">
+                                <span class="status-badge status-purple">Hackathon Participation</span>
+                                <h3 class="card-title">Odoo × NMIT Bangalore Hackathon 2026</h3>
+                                <p style="font-size: 0.8rem; font-weight: 600; color: #d8b4fe; margin-bottom: 15px; margin-top: -5px;">Nitte Meenakshi Institute of Technology (NMIT), Bengaluru</p>
+                                <p class="card-desc" style="font-size: 0.8rem; margin-bottom: 12px;">Participated as part of <strong>Team Tech Neon</strong>, where we developed DayFlow, an HRMS platform to streamline employee workflows.</p>
+                                <p class="card-desc" style="font-size: 0.8rem; margin-bottom: 15px;">The hackathon provided intense hands-on experience in full-stack development, database design, API integration, and teamwork under time constraints.</p>
+                                <div style="display: flex; flex-direction: column; gap: 8px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; border-left: 2px solid #a855f7; font-size: 0.8rem; color: rgba(255,255,255,0.9);">
+                                    <div>🏆 <strong>Project:</strong> DayFlow — HRMS</div>
+                                    <div>👥 <strong>Team:</strong> Tech Neon</div>
+                                    <div>💻 <strong>Focus:</strong> Full-Stack Development & HR Technology</div>
+                                    <div>🎯 <strong>My Role:</strong> Team Lead & PostgreSQL Database Developer</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 3 (SIH) -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot glow-blue"></div>
+                        <div class="timeline-content glass-card group" onclick="openModal('modal-sih-gallery')" style="cursor: pointer;">
+                            <div class="card-graphic timeline-img" style="position: relative;">
+                                <img src="sih/1.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="SIH Internal Hackathon">
+                                <div class="hover-overlay"><span class="explore-btn">View Gallery ↗</span></div>
+                            </div>
+                            <div class="card-info">
+                                <span class="status-badge status-gold">SIH 2026 Nominee</span>
+                                <h3 class="card-title">Smart India Hackathon (SIH) Internal 2026</h3>
+                                <p style="font-size: 0.8rem; font-weight: 600; color: #fde047; margin-bottom: 15px; margin-top: -5px;">SIH 2026 Internal Hackathon</p>
+                                <p class="card-desc" style="font-size: 0.8rem; margin-bottom: 12px;">Participated as a key member of <strong>Team TECH NEON</strong>, addressing real-world problem statements through innovative software solutions.</p>
+                                <p class="card-desc" style="font-size: 0.8rem; margin-bottom: 15px;">Through intensive ideation, research, rapid prototyping, and technical presentation, our efforts successfully led to project nomination.</p>
+                                <div style="display: flex; flex-direction: column; gap: 8px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; border-left: 2px solid #eab308; font-size: 0.8rem; color: rgba(255,255,255,0.9);">
+                                    <div>🏆 <strong>Achievement:</strong> Nominated for SIH 2026</div>
+                                    <div>👥 <strong>Team:</strong> TECH NEON</div>
+                                    <div>💡 <strong>Focus:</strong> Artificial Intelligence & Software Innovation</div>
+                                    <div>🚀 <strong>Skills:</strong> Problem Solving • Prototyping • AI • Teamwork</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -603,6 +688,56 @@
         </div>
     </div>
 
+    <!-- XACTITUDE GALLERY MODAL -->
+    <div id="modal-xactitude-gallery" class="modal-overlay" onclick="closeModal(event, 'modal-xactitude-gallery')">
+        <div class="modal-content" onclick="event.stopPropagation()" style="background: rgba(15,15,15,0.98); width: 95%; max-width: 900px; padding: 40px;">
+            <div class="modal-close" onclick="closeModal(null, 'modal-xactitude-gallery')">×</div>
+            <div class="modal-header">
+                <span class="status-badge status-blue">Hackathon Gallery</span>
+                <h2 class="modal-title">XACTITUDE 2026</h2>
+                <h3 class="modal-subtitle">Event Photos & Presentation</h3>
+            </div>
+            <div class="modal-body" style="display: flex; flex-direction: column; gap: 30px; padding-top: 15px;">
+                <img src="KJ/KJ.jpeg" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <video src="KJ/3.mp4" autoplay loop muted controls style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"></video>
+                <img src="KJ/2.jpeg" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <img src="KJ/4.png" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            </div>
+        </div>
+    </div>
+    
+    <!-- ODOO GALLERY MODAL -->
+    <div id="modal-odoo-gallery" class="modal-overlay" onclick="closeModal(event, 'modal-odoo-gallery')">
+        <div class="modal-content" onclick="event.stopPropagation()" style="background: rgba(15,15,15,0.98); width: 95%; max-width: 900px; padding: 40px;">
+            <div class="modal-close" onclick="closeModal(null, 'modal-odoo-gallery')">×</div>
+            <div class="modal-header">
+                <span class="status-badge status-purple">Hackathon Gallery</span>
+                <h2 class="modal-title">Odoo × NMIT 2026</h2>
+                <h3 class="modal-subtitle">Event Photos & Presentation</h3>
+            </div>
+            <div class="modal-body" style="display: flex; flex-direction: column; gap: 30px; padding-top: 15px;">
+                <img src="odoo/WhatsApp%20Image%202026-10-07%20at%202.06.37%20PM.jpeg" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <video src="odoo/3.mp4" autoplay loop muted playsinline style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); pointer-events: none;"></video>
+                <video src="odoo/WhatsApp%20Video%202026-10-07%20at%202.06.37%20PM.mp4" autoplay loop muted playsinline style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); pointer-events: none;"></video>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SIH GALLERY MODAL -->
+    <div id="modal-sih-gallery" class="modal-overlay" onclick="closeModal(event, 'modal-sih-gallery')">
+        <div class="modal-content" onclick="event.stopPropagation()" style="background: rgba(15,15,15,0.98); width: 95%; max-width: 900px; padding: 40px;">
+            <div class="modal-close" onclick="closeModal(null, 'modal-sih-gallery')">×</div>
+            <div class="modal-header">
+                <span class="status-badge status-gold">Hackathon Gallery</span>
+                <h2 class="modal-title">Smart India Hackathon (SIH) Internal 2026</h2>
+                <h3 class="modal-subtitle">Event Photos</h3>
+            </div>
+            <div class="modal-body" style="display: flex; flex-direction: column; gap: 30px; padding-top: 15px;">
+                <img src="sih/1.jpg" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            </div>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 

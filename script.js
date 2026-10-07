@@ -161,3 +161,28 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
+// ==========================================
+// CAROUSEL SYSTEM LOGIC
+// ==========================================
+const carousels = {};
+
+window.moveCarousel = function(event, id, direction) {
+    if (event) event.stopPropagation(); 
+    if (carousels[id] === undefined) carousels[id] = 0;
+    
+    const container = document.getElementById(id);
+    if (!container) return;
+    
+    const slides = container.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    
+    carousels[id] += direction;
+    
+    if (carousels[id] >= totalSlides) carousels[id] = 0;
+    if (carousels[id] < 0) carousels[id] = totalSlides - 1;
+    
+    slides.forEach(slide => {
+        slide.style.transform = `translateX(-${carousels[id] * 100}%)`;
+    });
+};
