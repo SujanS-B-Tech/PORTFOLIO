@@ -186,3 +186,36 @@ window.moveCarousel = function(event, id, direction) {
         slide.style.transform = `translateX(-${carousels[id] * 100}%)`;
     });
 };
+
+// ==========================================
+// CERTIFICATE VIEWER MODAL LOGIC
+// ==========================================
+function openCertModal(src, title) {
+    const modal = document.getElementById('modal-cert-viewer');
+    const modalImg = document.getElementById('cert-modal-img');
+    const modalTitle = document.getElementById('cert-modal-title');
+    if (!modal || !modalImg) return;
+    
+    modalImg.src = src;
+    if (modalTitle && title) {
+        modalTitle.textContent = title;
+    }
+    openModal('modal-cert-viewer');
+}
+
+// Attach click listener to all certificate cards
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.cert-card-img').forEach(img => {
+        img.addEventListener('click', () => {
+            openCertModal(img.src, img.alt);
+        });
+    });
+});
+
+// Also attach immediately in case DOM is already loaded
+document.querySelectorAll('.cert-card-img').forEach(img => {
+    img.addEventListener('click', () => {
+        openCertModal(img.src, img.alt);
+    });
+});
+
