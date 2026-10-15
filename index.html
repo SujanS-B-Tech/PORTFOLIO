@@ -30,12 +30,12 @@
         <header>
             <div class="logo"></div>
             <nav id="main-nav">
-                <a href="#tab-home" class="active">Home</a>
-                <a href="#tab-about">About</a>
-                <a href="#tab-project">Project</a>
-                <a href="#tab-events">Events</a>
-                <a href="#tab-certifications">Certifications </a>
-                <a href="#tab-contact">Contact</a>
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#project">Project</a>
+                <a href="#events">Events</a>
+                <a href="#certificate">Certifications</a>
+                <a href="#contact">Contact</a>
             </nav>
             <div class="hamburger">
                 <span></span><span></span>
@@ -45,7 +45,8 @@
 
     <!-- Scrolling Sections Layer -->
     <div class="scroll-content">
-        <div id="tab-home" class="tab-content">
+        <div id="tab-home" class="tab-content" style="position: relative;">
+            <span id="home" style="position: absolute; top: 0; left: 0; height: 1px; width: 1px; opacity: 0; pointer-events: none;"></span>
             <div class="hero-content">
                 <!-- Left Side texts -->
                 <div class="hero-left-col">
@@ -79,6 +80,7 @@
         </div>
 
         <div id="tab-about" class="tab-content" style="position: relative; overflow: hidden; height: 100vh; width: 100vw; background: transparent;">
+            <span id="about" style="position: absolute; top: 0; left: 0; height: 1px; width: 1px; opacity: 0; pointer-events: none;"></span>
             <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative;">
 
             <!-- Background massive text -->
@@ -103,7 +105,7 @@
                             <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M11 2H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zm-1 9H6V9h4v2z"/></svg> 
                             View Resume
                         </a>
-                        <a href="#tab-project" onclick="document.querySelector('a[href=\'#tab-project\']').click()" style="background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 14px 28px; border-radius: 30px; font-size: 0.95rem; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; font-family: 'Outfit', sans-serif;" onmouseover="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.3)';" onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.15)';">
+                        <a href="#project" onclick="window.navigateToSection('project'); return false;" style="background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 14px 28px; border-radius: 30px; font-size: 0.95rem; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; font-family: 'Outfit', sans-serif;" onmouseover="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.3)';" onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.15)';">
                             <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/></svg>
                             View Projects
                         </a>
@@ -160,7 +162,9 @@
             </div>
         </div>
 
-        <div id="tab-project" class="tab-content">
+        <div id="tab-project" class="tab-content" style="position: relative;">
+            <span id="project" style="position: absolute; top: 0; left: 0; height: 1px; width: 1px; opacity: 0; pointer-events: none;"></span>
+            <span id="projects" style="position: absolute; top: 0; left: 0; height: 1px; width: 1px; opacity: 0; pointer-events: none;"></span>
             <div class="premium-project-layout">
                 <div class="premium-header">
                     <h2 class="gradient-title">Featured Intelligence</h2>
@@ -293,7 +297,8 @@
             </div>
         </div>
 
-        <div id="tab-events" class="tab-content">
+        <div id="tab-events" class="tab-content" style="position: relative;">
+            <span id="events" style="position: absolute; top: 0; left: 0; height: 1px; width: 1px; opacity: 0; pointer-events: none;"></span>
             <div class="premium-project-layout">
                 <div class="premium-header">
                     <h2 class="gradient-title">Events & Milestones</h2>
@@ -377,7 +382,10 @@
             </div>
         </div>
 
-        <div id="tab-certifications" class="tab-content" style="padding-top: 10vh; pointer-events: auto;">
+        <div id="tab-certifications" class="tab-content" style="padding-top: 10vh; pointer-events: auto; position: relative;">
+            <span id="certificate" style="position: absolute; top: 0; left: 0; height: 1px; width: 1px; opacity: 0; pointer-events: none;"></span>
+            <span id="certificates" style="position: absolute; top: 0; left: 0; height: 1px; width: 1px; opacity: 0; pointer-events: none;"></span>
+            <span id="certifications" style="position: absolute; top: 0; left: 0; height: 1px; width: 1px; opacity: 0; pointer-events: none;"></span>
             <div class="premium-project-layout" style="margin-top: 0;">
                 <div class="premium-header" style="margin-bottom: 30px;">
                     <h2 class="gradient-title" style="font-size: 3rem;">Credentials & Certifications</h2>
@@ -402,6 +410,8 @@
                         <img src="./certification/OneDrive_1_06-10-2026/KJ%202K26.jpeg" class="cert-card-img" alt="KJ 2K26 Hackathon Certificate" title="Click to view">
                         <img src="./certification/OneDrive_1_06-10-2026/MICROSOFT%20AIML.png" class="cert-card-img" alt="Microsoft AI & Machine Learning Certificate" title="Click to view">
                         <img src="./certification/OneDrive_1_06-10-2026/MICROSOFT%20SQL%20SERVER.jpeg" class="cert-card-img" alt="Microsoft SQL Server Database Certificate" title="Click to view">
+                        <img src="./certification/OneDrive_1_06-10-2026/UNSTOP.jpeg" class="cert-card-img" alt="Unstop Certificate" title="Click to view">
+                        <img src="./certification/OneDrive_1_06-10-2026/UNSTOP%202.jpeg" class="cert-card-img" alt="Unstop Certificate 2" title="Click to view">
                         <img src="./certification/OneDrive_1_06-10-2026/Udemy%20ai%20learning%20.jpeg" class="cert-card-img" alt="Udemy AI Learning Certificate" title="Click to view">
                         <img src="./certification/OneDrive_1_06-10-2026/YUVA%20INTERNSHIP.jpeg" class="cert-card-img" alt="YUVA Internship Certificate" title="Click to view">
                         <img src="./certification/OneDrive_1_06-10-2026/generative%20ai%20university.png" class="cert-card-img" alt="Generative AI University Certificate" title="Click to view">
@@ -438,7 +448,8 @@
             </div>
         </div>
 
-        <div id="tab-contact" class="tab-content" style="overflow-y: auto; pointer-events: auto; height: 100vh;">
+        <div id="tab-contact" class="tab-content" style="overflow-y: auto; pointer-events: auto; height: 100vh; position: relative;">
+            <span id="contact" style="position: absolute; top: 0; left: 0; height: 1px; width: 1px; opacity: 0; pointer-events: none;"></span>
             <div class="premium-project-layout" style="margin-top: 10vh; max-width: 1200px; margin-left: auto; margin-right: auto; padding-right: 40px; padding-left: 20px; position: relative;">
                 
                 <div class="ambient-glow glow-blue"></div>
@@ -464,7 +475,7 @@
                                 <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/></svg>
                             </a>
                             
-                            <a href="#tab-project" onclick="document.querySelector('a[href=\'#tab-project\']').click()" style="padding: 16px 36px; font-size: 1.1rem; font-weight: 600; border-radius: 12px; color: #fff; background: transparent; border: 1px solid rgba(255, 255, 255, 0.3); text-decoration: none; display: inline-flex; align-items: center; gap: 12px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.6)';" onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.3)';">
+                            <a href="#project" onclick="window.navigateToSection('project'); return false;" style="padding: 16px 36px; font-size: 1.1rem; font-weight: 600; border-radius: 12px; color: #fff; background: transparent; border: 1px solid rgba(255, 255, 255, 0.3); text-decoration: none; display: inline-flex; align-items: center; gap: 12px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.6)';" onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.3)';">
                                 See my work
                                 <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
                             </a>

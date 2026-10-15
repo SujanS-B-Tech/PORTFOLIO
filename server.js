@@ -6,6 +6,28 @@ const PORT = 3000;
 
 http.createServer((req, res) => {
     let baseURL = req.url.split('?')[0];
+
+    // Support clean URL routes for sections (e.g. /certificate, /certificates, /certifications)
+    const routeAliases = {
+        '/certificate': '/#certificate',
+        '/certificates': '/#certificate',
+        '/certification': '/#certificate',
+        '/certifications': '/#certificate',
+        '/home': '/#home',
+        '/about': '/#about',
+        '/project': '/#project',
+        '/projects': '/#project',
+        '/events': '/#events',
+        '/contact': '/#contact'
+    };
+
+    const lowerBase = baseURL.toLowerCase().replace(/\/$/, '');
+    if (routeAliases[lowerBase]) {
+        res.writeHead(302, { 'Location': routeAliases[lowerBase] });
+        res.end();
+        return;
+    }
+
     let filePath = '.' + decodeURI(baseURL);
     if (filePath == './') {
         filePath = './index.html';

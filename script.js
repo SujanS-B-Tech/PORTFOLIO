@@ -82,43 +82,205 @@ window.addEventListener('scroll', () => {
   );
 });
 
-// Smooth Scrolling Navigation Logic
+// ==========================================
+// DEEP LINKING & NAVIGATION ROUTING LOGIC
+// ==========================================
 const navLinks = document.querySelectorAll('#main-nav a');
 const tabContents = document.querySelectorAll('.tab-content');
 
+// Section and URL Hash mappings
+const sectionMap = {
+    'home': 'tab-home',
+    'tab-home': 'tab-home',
+    'about': 'tab-about',
+    'tab-about': 'tab-about',
+    'project': 'tab-project',
+    'projects': 'tab-project',
+    'tab-project': 'tab-project',
+    'events': 'tab-events',
+    'tab-events': 'tab-events',
+    'certificate': 'tab-certifications',
+    'certificates': 'tab-certifications',
+    'certification': 'tab-certifications',
+    'certifications': 'tab-certifications',
+    'tab-certifications': 'tab-certifications',
+    'contact': 'tab-contact',
+    'tab-contact': 'tab-contact'
+};
+
+const cleanHashMap = {
+    'tab-home': 'home',
+    'tab-about': 'about',
+    'tab-project': 'project',
+    'tab-events': 'events',
+    'tab-certifications': 'certificate',
+    'tab-contact': 'contact'
+};
+
+// Sync canvas frame index immediately with the current scroll position
+function syncCanvasToScroll(instant = false) {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
+    if (maxScrollTop > 0) {
+        const scrollFraction = Math.max(0, Math.min(1, scrollTop / maxScrollTop));
+        targetFrameIndex = Math.min(
+            frameCount - 1,
+            Math.floor(scrollFraction * (frameCount - 1))
+        );
+        if (instant) {
+            currentLoadedFrame = targetFrameIndex;
+        }
+    }
+}
+
+// Update active navigation link based on section ID or hash
+function updateActiveNav(sectionId) {
+    const cleanHash = cleanHashMap[sectionId] || sectionId;
+    navLinks.forEach(link => {
+        const href = (link.getAttribute('href') || '').replace(/^#/, '').toLowerCase();
+        if (href === cleanHash || sectionMap[href] === sectionId || href === sectionId) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
+// Programmatic navigation to section by ID or hash alias
+window.navigateToSection = function(identifier, smooth = true, updateHash = true) {
+    if (!identifier) return;
+    const clean = identifier.replace(/^#/, '').toLowerCase().trim();
+    const targetId = sectionMap[clean] || clean;
+    const targetTab = document.getElementById(targetId) || document.getElementById(clean);
+    
+    if (targetTab) {
+        targetTab.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' });
+        
+        const cleanHash = cleanHashMap[targetTab.id] || clean;
+        if (updateHash) {
+            if (history.pushState) {
+                history.pushState(null, '', '#' + cleanHash);
+            } else {
+                window.location.hash = '#' + cleanHash;
+            }
+        }
+        updateActiveNav(targetTab.id);
+        
+        if (!smooth) {
+            syncCanvasToScroll(true);
+        }
+    }
+};
+
+// Nav Link click listeners
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetTab = document.getElementById(targetId);
-        
-        if(targetTab) {
-            targetTab.scrollIntoView({ behavior: 'smooth' });
+        // If modified click (Ctrl/Cmd/Middle Click), allow default browser new-tab behavior
+        if (e.metaKey || e.ctrlKey || e.button === 1) {
+            return;
         }
+        e.preventDefault();
+        const rawHref = link.getAttribute('href') || '';
+        window.navigateToSection(rawHref, true, true);
     });
 });
 
-// Update active navigation link based on scroll position
+// Update active navigation link and URL hash based on scroll position
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.5 // trigger when 50% of the section is visible
+    threshold: 0.35 // trigger when 35% of the section is visible
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === entry.target.id) {
-                    link.classList.add('active');
-                }
-            });
+            const sectionId = entry.target.id;
+            updateActiveNav(sectionId);
+            
+            const cleanHash = cleanHashMap[sectionId] || sectionId;
+            // Update URL hash using replaceState so browser history is clean
+            if (window.location.hash !== '#' + cleanHash) {
+                history.replaceState(null, '', '#' + cleanHash);
+            }
         }
     });
 }, observerOptions);
 
 tabContents.forEach(tab => observer.observe(tab));
+
+// Handle direct link opening / URL hash navigation on initial page load
+function handleInitialHash() {
+    const hash = window.location.hash;
+    if (hash) {
+        // Instant position first to prevent jump flash
+        window.navigateToSection(hash, false, false);
+        
+        // Re-align once after DOM stabilizes
+        setTimeout(() => {
+            window.navigateToSection(hash, false, false);
+            syncCanvasToScroll(true);
+        }, 120);
+
+        // Final smooth pass to ensure exact alignment
+        setTimeout(() => {
+            window.navigateToSection(hash, true, false);
+            syncCanvasToScroll(true);
+        }, 350);
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', handleInitialHash);
+} else {
+    handleInitialHash();
+}
+window.addEventListener('load', handleInitialHash);
+
+// Listen to browser Back / Forward history navigation
+window.addEventListener('popstate', () => {
+    const hash = window.location.hash || '#home';
+    window.navigateToSection(hash, true, false);
+});
+
+// Copy direct certificate link to clipboard for forms and applications
+window.copyCertLink = function() {
+    const currentUrlWithoutHash = window.location.href.split('#')[0];
+    const directCertUrl = currentUrlWithoutHash + '#certificate';
+    const textSpan = document.getElementById('copy-cert-text');
+    
+    const showCopiedFeedback = () => {
+        if (textSpan) {
+            const prev = textSpan.textContent;
+            textSpan.textContent = '✓ Link Copied!';
+            setTimeout(() => {
+                textSpan.textContent = prev;
+            }, 2500);
+        }
+    };
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(directCertUrl).then(showCopiedFeedback).catch(() => {
+            fallbackClipboardCopy(directCertUrl, showCopiedFeedback);
+        });
+    } else {
+        fallbackClipboardCopy(directCertUrl, showCopiedFeedback);
+    }
+};
+
+function fallbackClipboardCopy(text, callback) {
+    const tempInput = document.createElement('input');
+    tempInput.setAttribute('value', text);
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    try {
+        document.execCommand('copy');
+        if (callback) callback();
+    } catch(err) {
+        console.error('Copy failed', err);
+    }
+    document.body.removeChild(tempInput);
+}
 
 // ==========================================
 // MODAL SYSTEM LOGIC
