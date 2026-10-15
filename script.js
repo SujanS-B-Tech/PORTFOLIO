@@ -88,6 +88,15 @@ window.addEventListener('scroll', () => {
 const navLinks = document.querySelectorAll('#main-nav a');
 const tabContents = document.querySelectorAll('.tab-content');
 
+// Turn off browser default scroll restoration so pasted hashes work 100% reliably
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+// Capture user's requested hash immediately at script execution
+const initialRequestedHash = (window.location.hash || '').replace(/^#/, '').toLowerCase().trim();
+let isInitialHashNavigating = Boolean(initialRequestedHash && initialRequestedHash !== 'home' && initialRequestedHash !== 'tab-home');
+
 // Section and URL Hash mappings
 const sectionMap = {
     'home': 'tab-home',
@@ -116,6 +125,14 @@ const cleanHashMap = {
     'tab-certifications': 'certificate',
     'tab-contact': 'contact'
 };
+
+// Calculate absolute vertical position of any element in document
+function getElementAbsoluteTop(element) {
+    if (!element) return 0;
+    const rect = element.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
+    return rect.top + scrollTop;
+}
 
 // Sync canvas frame index immediately with the current scroll position
 function syncCanvasToScroll(instant = false) {
@@ -146,6 +163,20 @@ function updateActiveNav(sectionId) {
     });
 }
 
+// Scroll directly to target element and update canvas/nav
+function scrollToTarget(targetTab, smooth = false) {
+    if (!targetTab) return;
+    const targetY = getElementAbsoluteTop(targetTab);
+    
+    window.scrollTo({
+        top: targetY,
+        behavior: smooth ? 'smooth' : 'auto'
+    });
+    
+    syncCanvasToScroll(true);
+    updateActiveNav(targetTab.id);
+}
+
 // Programmatic navigation to section by ID or hash alias
 window.navigateToSection = function(identifier, smooth = true, updateHash = true) {
     if (!identifier) return;
@@ -154,7 +185,9 @@ window.navigateToSection = function(identifier, smooth = true, updateHash = true
     const targetTab = document.getElementById(targetId) || document.getElementById(clean);
     
     if (targetTab) {
-        targetTab.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' });
+        // Temporarily pause scroll spy while moving
+        isInitialHashNavigating = true;
+        scrollToTarget(targetTab, smooth);
         
         const cleanHash = cleanHashMap[targetTab.id] || clean;
         if (updateHash) {
@@ -166,9 +199,9 @@ window.navigateToSection = function(identifier, smooth = true, updateHash = true
         }
         updateActiveNav(targetTab.id);
         
-        if (!smooth) {
-            syncCanvasToScroll(true);
-        }
+        setTimeout(() => {
+            isInitialHashNavigating = false;
+        }, smooth ? 700 : 50);
     }
 };
 
@@ -193,6 +226,9 @@ const observerOptions = {
 };
 
 const observer = new IntersectionObserver((entries) => {
+    // IMPORTANT: Do not overwrite the URL hash while landing on a requested deep link
+    if (isInitialHashNavigating) return;
+
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const sectionId = entry.target.id;
@@ -209,78 +245,72 @@ const observer = new IntersectionObserver((entries) => {
 
 tabContents.forEach(tab => observer.observe(tab));
 
+// User interaction breaks any automatic anchoring so user has full control
+const stopInitialLock = () => {
+    isInitialHashNavigating = false;
+};
+window.addEventListener('wheel', stopInitialLock, { passive: true });
+window.addEventListener('touchmove', stopInitialLock, { passive: true });
+window.addEventListener('keydown', stopInitialLock, { passive: true });
+
 // Handle direct link opening / URL hash navigation on initial page load
-function handleInitialHash() {
-    const hash = window.location.hash;
-    if (hash) {
-        // Instant position first to prevent jump flash
-        window.navigateToSection(hash, false, false);
-        
-        // Re-align once after DOM stabilizes
-        setTimeout(() => {
-            window.navigateToSection(hash, false, false);
-            syncCanvasToScroll(true);
-        }, 120);
+function handleInitialDeepLink() {
+    if (!initialRequestedHash) return;
+    
+    const targetId = sectionMap[initialRequestedHash] || initialRequestedHash;
+    const targetTab = document.getElementById(targetId) || document.getElementById(initialRequestedHash);
+    
+    if (!targetTab) return;
 
-        // Final smooth pass to ensure exact alignment
+    // 1. Instant jump immediately
+    scrollToTarget(targetTab, false);
+    
+    // 2. Re-anchor as images, fonts, and layout expand
+    const delays = [30, 80, 160, 300, 500, 800, 1200, 1800];
+    delays.forEach(delay => {
         setTimeout(() => {
-            window.navigateToSection(hash, true, false);
-            syncCanvasToScroll(true);
-        }, 350);
-    }
+            if (isInitialHashNavigating) {
+                scrollToTarget(targetTab, false);
+            }
+        }, delay);
+    });
+
+    // 3. Whenever an image finishes loading, re-anchor if user hasn't scrolled yet
+    document.querySelectorAll('img').forEach(img => {
+        if (!img.complete) {
+            img.addEventListener('load', () => {
+                if (isInitialHashNavigating) {
+                    scrollToTarget(targetTab, false);
+                }
+            }, { once: true });
+        }
+    });
+
+    // 4. Release lock after layout has fully settled
+    setTimeout(() => {
+        isInitialHashNavigating = false;
+        updateActiveNav(targetTab.id);
+    }, 2000);
 }
 
+// Execute initial deep link immediately and on events
+handleInitialDeepLink();
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', handleInitialHash);
-} else {
-    handleInitialHash();
+    document.addEventListener('DOMContentLoaded', handleInitialDeepLink);
 }
-window.addEventListener('load', handleInitialHash);
+window.addEventListener('load', () => {
+    if (isInitialHashNavigating && initialRequestedHash) {
+        const targetId = sectionMap[initialRequestedHash] || initialRequestedHash;
+        const targetTab = document.getElementById(targetId) || document.getElementById(initialRequestedHash);
+        if (targetTab) scrollToTarget(targetTab, false);
+    }
+});
 
 // Listen to browser Back / Forward history navigation
 window.addEventListener('popstate', () => {
     const hash = window.location.hash || '#home';
     window.navigateToSection(hash, true, false);
 });
-
-// Copy direct certificate link to clipboard for forms and applications
-window.copyCertLink = function() {
-    const currentUrlWithoutHash = window.location.href.split('#')[0];
-    const directCertUrl = currentUrlWithoutHash + '#certificate';
-    const textSpan = document.getElementById('copy-cert-text');
-    
-    const showCopiedFeedback = () => {
-        if (textSpan) {
-            const prev = textSpan.textContent;
-            textSpan.textContent = '✓ Link Copied!';
-            setTimeout(() => {
-                textSpan.textContent = prev;
-            }, 2500);
-        }
-    };
-
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(directCertUrl).then(showCopiedFeedback).catch(() => {
-            fallbackClipboardCopy(directCertUrl, showCopiedFeedback);
-        });
-    } else {
-        fallbackClipboardCopy(directCertUrl, showCopiedFeedback);
-    }
-};
-
-function fallbackClipboardCopy(text, callback) {
-    const tempInput = document.createElement('input');
-    tempInput.setAttribute('value', text);
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    try {
-        document.execCommand('copy');
-        if (callback) callback();
-    } catch(err) {
-        console.error('Copy failed', err);
-    }
-    document.body.removeChild(tempInput);
-}
 
 // ==========================================
 // MODAL SYSTEM LOGIC
