@@ -394,7 +394,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Withheld for privacy (Student ID)",
         status: "Active / Incoming Offer (In Progress)",
         verifyUrl: null,
-        assetUrl: "./certification/OneDrive_1_06-10-2026/CODE%20ALPHA%20INTERNSHIP.jpeg",
+        assetUrl: "assets/certifications/CODE%20ALPHA%20INTERNSHIP.jpeg",
         desc: "Formal offer for a virtual Artificial Intelligence internship involving hands-on practical assignments and projects.",
         skills: ["Artificial Intelligence", "Practical Assignments", "Applied Projects", "Virtual Internship"]
     },
@@ -408,7 +408,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown on certificate",
         status: "Active / Incoming Offer (In Progress)",
         verifyUrl: null,
-        assetUrl: "./certification/OneDrive_1_06-10-2026/YUVA%20INTERNSHIP.jpeg",
+        assetUrl: "assets/certifications/YUVA%20INTERNSHIP.jpeg",
         desc: "Remote internship offer for a Virtual Data Analysis Associate Intern role with structured modules, final project, and mentor evaluation.",
         skills: ["Data Analysis", "Structured Tasks", "Industry Evaluation", "Remote Internship"]
     },
@@ -422,7 +422,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown separately",
         status: "Online Verified via Coursera",
         verifyUrl: "https://coursera.org/verify/professional-cert/SUJASS1SQLD9WMS",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/MICROSOFT%20SQL%20SERVER.jpeg",
+        assetUrl: "assets/certifications/MICROSOFT%20SQL%20SERVER.jpeg",
         desc: "Covers SQL foundations, data manipulation, relational database design, transactions, indexing, performance optimization, and database security.",
         skills: ["SQL", "Microsoft SQL Server", "T-SQL", "Relational Database Design", "Transactions", "Query Optimization", "Database Security"]
     },
@@ -436,7 +436,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown on certificate",
         status: "Verified via QR Code (Wingspan)",
         verifyUrl: "https://verify.onwingspan.com",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/INFOSYS%20AI%20FOUNDATION%20ACHIEVEMENT%20CERTIFICATE.png",
+        assetUrl: "assets/certifications/INFOSYS%20AI%20FOUNDATION%20ACHIEVEMENT%20CERTIFICATE.png",
         desc: "Achievement certificate for completing the comprehensive Artificial Intelligence Foundation Certification program.",
         skills: ["AI Foundations", "Machine Intelligence", "Conceptual Frameworks"]
     },
@@ -450,7 +450,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown on certificate",
         status: "Completed Internship",
         verifyUrl: null,
-        assetUrl: "./certification/OneDrive_1_06-10-2026/nextsync.jpeg",
+        assetUrl: "assets/certifications/nextsync.jpeg",
         desc: "Successfully completed hands-on internship focusing on data structures, algorithmic problem solving, and analytical implementations.",
         skills: ["Data Structures", "Algorithms Exposure", "Algorithmic Problem Solving", "Hands-on Internship"]
     },
@@ -464,7 +464,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown on certificate",
         status: "Verified via QR Code (Wingspan)",
         verifyUrl: "https://verify.onwingspan.com",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/BASIS%20OF%20PYTHON%20%28INFOSYS%29.jpeg",
+        assetUrl: "assets/certifications/BASIS%20OF%20PYTHON%20%28INFOSYS%29.jpeg",
         desc: "Foundational training in Python programming, covering syntax, data types, control flow, functions, and scripting techniques.",
         skills: ["Python Fundamentals", "Scripting", "Data Structures", "Automation"]
     },
@@ -478,7 +478,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown on certificate",
         status: "Verified via QR Code (Wingspan)",
         verifyUrl: "https://verify.onwingspan.com",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/INTRODUCTION%20TO%20ARTIFICIAL%20INTELLIGENCE%20%28INFOSYS%29.jpeg",
+        assetUrl: "assets/certifications/INTRODUCTION%20TO%20ARTIFICIAL%20INTELLIGENCE%20%28INFOSYS%29.jpeg",
         desc: "Introductory course establishing foundational concepts, terminology, history, and applications of artificial intelligence.",
         skills: ["AI Fundamentals", "Knowledge Representation", "Search Strategies", "Intelligent Systems"]
     },
@@ -492,7 +492,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown on certificate",
         status: "Verified via QR Code (Wingspan)",
         verifyUrl: "https://verify.onwingspan.com",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/INTRODUCTION%20TO%20DATA%20SCIENCE%20.jpeg",
+        assetUrl: "assets/certifications/INTRODUCTION%20TO%20DATA%20SCIENCE%20.jpeg",
         desc: "Explores the end-to-end data science lifecycle, exploratory data analysis, data preparation, modeling, and business insights.",
         skills: ["Data Science Lifecycle", "Exploratory Data Analysis", "Statistical Modeling", "Data Preparation"]
     },
@@ -506,7 +506,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown on certificate",
         status: "Verified via QR Code (Wingspan)",
         verifyUrl: "https://verify.onwingspan.com",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/INTRODUCTION%20TO%20DEEP%20LEARNING%20%28INFOSYS%29.jpeg",
+        assetUrl: "assets/certifications/INTRODUCTION%20TO%20DEEP%20LEARNING%20%28INFOSYS%29.jpeg",
         desc: "Foundational study of neural network architectures, forward & backpropagation, activation functions, and deep learning paradigms.",
         skills: ["Deep Learning Fundamentals", "Neural Networks", "Gradient Descent", "Model Architecture"]
     },
@@ -520,7 +520,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown on certificate",
         status: "Verified via QR Code (Wingspan)",
         verifyUrl: "https://verify.onwingspan.com",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/INTRODUCTION%20TO%20LANGUAGE%20PROCESSING%20.jpeg",
+        assetUrl: "assets/certifications/INTRODUCTION%20TO%20LANGUAGE%20PROCESSING%20.jpeg",
         desc: "Text processing fundamentals, tokenization, language modeling, syntactic analysis, and semantic understanding foundations.",
         skills: ["NLP Fundamentals", "Text Preprocessing", "Tokenization", "Language Models", "Semantic Analysis"]
     },
@@ -534,7 +534,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown on certificate",
         status: "Completed 14-day Internship",
         verifyUrl: null,
-        assetUrl: "./certification/OneDrive_1_06-10-2026/INTERNSHIP%2026.jpeg",
+        assetUrl: "assets/certifications/INTERNSHIP%2026.jpeg",
         desc: "Completed intensive 14-day internship covering practical machine learning workflows and artificial intelligence implementations.",
         skills: ["AI & ML Exposure", "Applied Machine Learning", "Hands-on Internship", "Model Workflows"]
     },
@@ -548,7 +548,7 @@ const CERTIFICATES_DATA = [
         credentialId: "2f2vA23I8i7115g5c4",
         status: "Verified via GUVI",
         verifyUrl: "https://www.guvi.in/certificate?id=2f2vA23I8i7115g5c4",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/guvi%20certification.png",
+        assetUrl: "assets/certifications/guvi%20certification.png",
         desc: "Foundational understanding of Amazon Web Services (AWS) infrastructure, cloud architecture primitives, EC2, S3, and modern cloud deployment.",
         skills: ["AWS Infrastructure", "Cloud Computing", "EC2", "S3", "Cloud Architecture"]
     },
@@ -562,7 +562,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown separately",
         status: "Online Verified via Coursera",
         verifyUrl: "https://coursera.org/verify/specialization/TVJ0OE3NCS9G",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/AI%20fundamental%20oxfords.png",
+        assetUrl: "assets/certifications/AI%20fundamental%20oxfords.png",
         desc: "Covers generative AI capabilities, responsible AI governance, real-world business use cases, and assessing strategic AI opportunities and risks.",
         skills: ["AI Fundamentals", "Generative AI", "AI Governance", "Business Use-Case Evaluation", "Responsible AI"]
     },
@@ -576,7 +576,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown separately",
         status: "Online Verified via Coursera",
         verifyUrl: "https://coursera.org/verify/specialization/10M9KAQFHA9X",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/generative%20ai%20university.png",
+        assetUrl: "assets/certifications/generative%20ai%20university.png",
         desc: "Comprehensive specialization covering generative AI foundations, prompt engineering for ChatGPT, deep research, and strategic agentic AI.",
         skills: ["Generative AI", "Prompt Engineering", "AI Research Workflows", "Agentic AI Concepts", "Strategic AI"]
     },
@@ -590,7 +590,7 @@ const CERTIFICATES_DATA = [
         credentialId: "a4309f84",
         status: "Verified via Mind Luster",
         verifyUrl: "https://www.mindluster.com",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/mind%20luster.jpg",
+        assetUrl: "assets/certifications/mind%20luster.jpg",
         desc: "Advanced concepts in artificial intelligence implemented with Python, covering algorithmic design, data modeling, and intelligent problem solving.",
         skills: ["Python for AI", "Advanced AI Concepts", "Algorithmic Modeling", "Intelligent Systems"]
     },
@@ -604,7 +604,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown separately",
         status: "Online Verified via Coursera",
         verifyUrl: "https://coursera.org/verify/professional-cert/ZLMDUEZ66CED",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/MICROSOFT%20AIML.png",
+        assetUrl: "assets/certifications/MICROSOFT%20AIML.png",
         desc: "5-course program covering AI/ML foundations, machine learning, AI infrastructure, engineering, troubleshooting agents, and Azure AI.",
         skills: ["AI & ML Foundations", "Azure AI", "Machine Learning", "AI Engineering", "Troubleshooting Agents", "Capstone Project"]
     },
@@ -618,7 +618,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown separately",
         status: "Online Verified via Coursera",
         verifyUrl: "https://coursera.org/verify/specialization/QSAGTQFLLV48",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/GOOGLE%20DATA%20ANALYTICS.png",
+        assetUrl: "assets/certifications/GOOGLE%20DATA%20ANALYTICS.png",
         desc: "Python fundamentals, functions, conditionals, loops, data structures, data cleaning, and analysis using NumPy, pandas, and Jupyter Notebook.",
         skills: ["Python", "NumPy", "pandas", "Jupyter Notebook", "Data Cleaning", "Exploratory Data Analysis", "Data Validation"]
     },
@@ -632,7 +632,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown separately",
         status: "Online Verified via Coursera",
         verifyUrl: "https://coursera.org/verify/N21EJBE3WSKI",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/JOB%20SEARCH%20WITH%20AI.png",
+        assetUrl: "assets/certifications/JOB%20SEARCH%20WITH%20AI.png",
         desc: "Applying AI tools and prompting strategies to structure career planning, optimize application materials, and streamline research workflows.",
         skills: ["AI-Assisted Workflows", "Career Planning", "Prompting", "Productivity"]
     },
@@ -646,7 +646,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown separately",
         status: "Online Verified via Coursera",
         verifyUrl: "https://coursera.org/verify/professional-cert/VPA9IF6M7O55",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/Google%20ai.png",
+        assetUrl: "assets/certifications/Google%20ai.png",
         desc: "Comprehensive 7-course program covering AI for brainstorming, research, writing, data analysis, content creation, app prototyping, and responsible evaluation.",
         skills: ["AI Productivity", "Prompting", "Research", "Content Creation", "Data Analysis", "Prototyping", "Responsible AI"]
     },
@@ -660,7 +660,7 @@ const CERTIFICATES_DATA = [
         credentialId: "e34s07ylnx0",
         status: "Verified Selection (Internshala)",
         verifyUrl: "https://internshala.com/verify_certificate",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/internshala%20selection.jpeg",
+        assetUrl: "assets/certifications/internshala%20selection.jpeg",
         desc: "Official Certificate of Selection confirming selection for the AI Web Development internship position at InAmigos Foundation through Internshala.",
         skills: ["AI Web Development", "Internship Selection", "Full Stack AI Prototyping"]
     },
@@ -674,7 +674,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown on certificate",
         status: "Verified via QR Code (Wingspan)",
         verifyUrl: "https://verify.onwingspan.com",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/ARTIFICIAL%20INTILIGENCE%20%28INFOSYSSPRINGBOARD%29.jpeg",
+        assetUrl: "assets/certifications/ARTIFICIAL%20INTILIGENCE%20%28INFOSYSSPRINGBOARD%29.jpeg",
         desc: "Course completion in foundational Artificial Intelligence principles, algorithms, and practical applications across software systems.",
         skills: ["Artificial Intelligence", "Intelligent Systems", "Infosys Springboard"]
     },
@@ -688,7 +688,7 @@ const CERTIFICATES_DATA = [
         credentialId: "26HCK1011251",
         status: "Event Participation",
         verifyUrl: null,
-        assetUrl: "./certification/OneDrive_1_06-10-2026/KJ%202K26.jpeg",
+        assetUrl: "assets/certifications/KJ%202K26.jpeg",
         desc: "Active participation in XACTITUDE 2026, a National Intercollegiate IT Fest organized by the Department of Computer Science.",
         skills: ["Technical Fest Participation", "IT Competitions", "Collegiate Networking"]
     },
@@ -702,7 +702,7 @@ const CERTIFICATES_DATA = [
         credentialId: "UC-f0412055-28a0-4881-a2ba-f731971ab299",
         status: "Online Verified via Udemy",
         verifyUrl: "https://ude.my/UC-f0412055-28a0-4881-a2ba-f731971ab299",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/Udemy%20ai%20learning%20.jpeg",
+        assetUrl: "assets/certifications/Udemy%20ai%20learning%20.jpeg",
         desc: "41-hour masterclass exploring ChatGPT, generative AI workflows, prompt engineering, and multimodal AI productivity tools.",
         skills: ["ChatGPT", "Generative AI", "Prompt Engineering", "41 Hours Training"]
     },
@@ -716,7 +716,7 @@ const CERTIFICATES_DATA = [
         credentialId: "Not shown on certificate",
         status: "Verified via QR Code on Cert",
         verifyUrl: null,
-        assetUrl: "./certification/OneDrive_1_06-10-2026/UNSTOP%202.jpeg",
+        assetUrl: "assets/certifications/UNSTOP%202.jpeg",
         desc: "Participation by Sujan S from VSB College of Engineering as Team 'sujannotagain' in the Global Innovation Hackathon 2026.",
         skills: ["Hackathon Participation", "Unstop", "Team sujannotagain", "Technical Innovation"]
     },
@@ -730,7 +730,7 @@ const CERTIFICATES_DATA = [
         credentialId: "UC-2d5b0531-8d0d-421c-8b2d-364e98ea24a3",
         status: "Online Verified via Udemy",
         verifyUrl: "https://ude.my/UC-2d5b0531-8d0d-421c-8b2d-364e98ea24a3",
-        assetUrl: "./certification/OneDrive_1_06-10-2026/udemy%20HR.jpeg",
+        assetUrl: "assets/certifications/udemy%20HR.jpeg",
         desc: "Focused 3.5-hour training on integrating AI tools into strategic human resources operations, talent workflows, and compliance frameworks.",
         skills: ["AI in HR", "Compliance Awareness", "HR Operations", "3.5 Hours Training"]
     }
