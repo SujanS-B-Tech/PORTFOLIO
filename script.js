@@ -384,7 +384,22 @@ window.moveCarousel = function(event, id, direction) {
 // ==========================================
 
 const CERTIFICATES_DATA = [
-    // 1. CodeAlpha Offer Letter (Oct 9, 2026)
+    // 1. IBM SkillsBuild — Craft Precise Prompts for AI Models (Nov 22, 2026)
+    {
+        title: "Craft Precise Prompts for AI Models",
+        provider: "IBM SkillsBuild",
+        date: "November 22, 2026",
+        typeBadge: "IBM Certificate",
+        badgeClass: "status-blue",
+        credentialId: "3b8bc92d-46b7-4bce-938d-986a58651204",
+        status: "Online Verified via Credly",
+        verifyUrl: "https://www.credly.com/badges/3b8bc92d-46b7-4bce-938d-986a58651204/public_url",
+        assetUrl: "certification/ibm/craft-precise-prompts-for-ai-models-cert.png",
+        pdfUrl: "certification/ibm/CraftPrecisePromptsforAIModels_Badge20261122-22-k0h1oa.pdf",
+        desc: "Official IBM SkillsBuild certificate verifying proficiency in crafting structured, contextual, and precise prompts for AI and large language models to maximize output accuracy and relevance.",
+        skills: ["Prompt Engineering", "AI Models", "Generative AI", "Context Design", "LLM Optimization"]
+    },
+    // 2. CodeAlpha Offer Letter (Oct 9, 2026)
     {
         title: "Artificial Intelligence Intern — Offer Letter",
         provider: "CodeAlpha",
@@ -398,7 +413,7 @@ const CERTIFICATES_DATA = [
         desc: "Formal offer for a virtual Artificial Intelligence internship involving hands-on practical assignments and projects.",
         skills: ["Artificial Intelligence", "Practical Assignments", "Applied Projects", "Virtual Internship"]
     },
-    // 2. YuvaIntern Offer Letter (Oct 9, 2026)
+    // 3. YuvaIntern Offer Letter (Oct 9, 2026)
     {
         title: "Virtual Data Analysis Associate Intern — Offer Letter",
         provider: "YuvaIntern.com (Henry Harvin Education)",
@@ -412,7 +427,7 @@ const CERTIFICATES_DATA = [
         desc: "Remote internship offer for a Virtual Data Analysis Associate Intern role with structured modules, final project, and mentor evaluation.",
         skills: ["Data Analysis", "Structured Tasks", "Industry Evaluation", "Remote Internship"]
     },
-    // 3. Microsoft SQL Server (Sep 20, 2026)
+    // 4. Microsoft SQL Server (Sep 20, 2026)
     {
         title: "Microsoft SQL Server",
         provider: "Microsoft via Coursera",
@@ -426,7 +441,7 @@ const CERTIFICATES_DATA = [
         desc: "Covers SQL foundations, data manipulation, relational database design, transactions, indexing, performance optimization, and database security.",
         skills: ["SQL", "Microsoft SQL Server", "T-SQL", "Relational Database Design", "Transactions", "Query Optimization", "Database Security"]
     },
-    // 4. Infosys AI Foundation Achievement (Jul 9, 2026)
+    // 5. Infosys AI Foundation Achievement (Jul 9, 2026)
     {
         title: "Artificial Intelligence Foundation Certification",
         provider: "Infosys Springboard / Infosys Limited",
@@ -440,7 +455,7 @@ const CERTIFICATES_DATA = [
         desc: "Achievement certificate for completing the comprehensive Artificial Intelligence Foundation Certification program.",
         skills: ["AI Foundations", "Machine Intelligence", "Conceptual Frameworks"]
     },
-    // 5. Nxtsync DSA Internship (Jun 1 - Jul 2, 2026)
+    // 6. Nxtsync DSA Internship (Jun 1 - Jul 2, 2026)
     {
         title: "Internship in DSA",
         provider: "Nxtsync",
@@ -454,7 +469,7 @@ const CERTIFICATES_DATA = [
         desc: "Successfully completed hands-on internship focusing on data structures, algorithmic problem solving, and analytical implementations.",
         skills: ["Data Structures", "Algorithms Exposure", "Algorithmic Problem Solving", "Hands-on Internship"]
     },
-    // 6. Basics of Python (Jul 1, 2026)
+    // 7. Basics of Python (Jul 1, 2026)
     {
         title: "Basics of Python",
         provider: "Infosys Springboard / Infosys Limited",
@@ -468,7 +483,7 @@ const CERTIFICATES_DATA = [
         desc: "Foundational training in Python programming, covering syntax, data types, control flow, functions, and scripting techniques.",
         skills: ["Python Fundamentals", "Scripting", "Data Structures", "Automation"]
     },
-    // 7. Introduction to Artificial Intelligence (Jul 1, 2026)
+    // 8. Introduction to Artificial Intelligence (Jul 1, 2026)
     {
         title: "Introduction to Artificial Intelligence",
         provider: "Infosys Springboard / Infosys Limited",
@@ -482,7 +497,7 @@ const CERTIFICATES_DATA = [
         desc: "Introductory course establishing foundational concepts, terminology, history, and applications of artificial intelligence.",
         skills: ["AI Fundamentals", "Knowledge Representation", "Search Strategies", "Intelligent Systems"]
     },
-    // 8. Introduction to Data Science (Jul 1, 2026)
+    // 9. Introduction to Data Science (Jul 1, 2026)
     {
         title: "Introduction to Data Science",
         provider: "Infosys Springboard / Infosys Limited",
@@ -496,7 +511,7 @@ const CERTIFICATES_DATA = [
         desc: "Explores the end-to-end data science lifecycle, exploratory data analysis, data preparation, modeling, and business insights.",
         skills: ["Data Science Lifecycle", "Exploratory Data Analysis", "Statistical Modeling", "Data Preparation"]
     },
-    // 9. Introduction to Deep Learning (Jul 1, 2026)
+    // 10. Introduction to Deep Learning (Jul 1, 2026)
     {
         title: "Introduction to Deep Learning",
         provider: "Infosys Springboard / Infosys Limited",
@@ -510,7 +525,7 @@ const CERTIFICATES_DATA = [
         desc: "Foundational study of neural network architectures, forward & backpropagation, activation functions, and deep learning paradigms.",
         skills: ["Deep Learning Fundamentals", "Neural Networks", "Gradient Descent", "Model Architecture"]
     },
-    // 10. Introduction to Natural Language Processing (Jul 1, 2026)
+    // 11. Introduction to Natural Language Processing (Jul 1, 2026)
     {
         title: "Introduction to Natural Language Processing",
         provider: "Infosys Springboard / Infosys Limited",
@@ -524,7 +539,7 @@ const CERTIFICATES_DATA = [
         desc: "Text processing fundamentals, tokenization, language modeling, syntactic analysis, and semantic understanding foundations.",
         skills: ["NLP Fundamentals", "Text Preprocessing", "Tokenization", "Language Models", "Semantic Analysis"]
     },
-    // 11. Triarch AI & ML Internship (Jun 15 - 29, 2026)
+    // 12. Triarch AI & ML Internship (Jun 15 - 29, 2026)
     {
         title: "Internship in Artificial Intelligence and Machine Learning",
         provider: "Triarch Private Limited",
@@ -538,7 +553,7 @@ const CERTIFICATES_DATA = [
         desc: "Completed intensive 14-day internship covering practical machine learning workflows and artificial intelligence implementations.",
         skills: ["AI & ML Exposure", "Applied Machine Learning", "Hands-on Internship", "Model Workflows"]
     },
-    // 12. AWS Infrastructure for Beginners (Jun 23, 2026)
+    // 13. AWS Infrastructure for Beginners (Jun 23, 2026)
     {
         title: "AWS Infrastructure for Beginners",
         provider: "GUVI / HCL",
@@ -552,7 +567,7 @@ const CERTIFICATES_DATA = [
         desc: "Foundational understanding of Amazon Web Services (AWS) infrastructure, cloud architecture primitives, EC2, S3, and modern cloud deployment.",
         skills: ["AWS Infrastructure", "Cloud Computing", "EC2", "S3", "Cloud Architecture"]
     },
-    // 13. AI Foundations for Business Professionals (Jun 14, 2026)
+    // 14. AI Foundations for Business Professionals (Jun 14, 2026)
     {
         title: "AI Foundations for Business Professionals",
         provider: "University of Oxford via Coursera",
@@ -566,7 +581,7 @@ const CERTIFICATES_DATA = [
         desc: "Covers generative AI capabilities, responsible AI governance, real-world business use cases, and assessing strategic AI opportunities and risks.",
         skills: ["AI Fundamentals", "Generative AI", "AI Governance", "Business Use-Case Evaluation", "Responsible AI"]
     },
-    // 14. Generative AI Strategic Leader (Jun 14, 2026)
+    // 15. Generative AI Strategic Leader (Jun 14, 2026)
     {
         title: "Generative AI Strategic Leader",
         provider: "Vanderbilt University via Coursera",
@@ -580,7 +595,7 @@ const CERTIFICATES_DATA = [
         desc: "Comprehensive specialization covering generative AI foundations, prompt engineering for ChatGPT, deep research, and strategic agentic AI.",
         skills: ["Generative AI", "Prompt Engineering", "AI Research Workflows", "Agentic AI Concepts", "Strategic AI"]
     },
-    // 15. Advanced Artificial Intelligence with Python (Jun 14, 2026)
+    // 16. Advanced Artificial Intelligence with Python (Jun 14, 2026)
     {
         title: "Advanced Artificial Intelligence with Python",
         provider: "Mind Luster",
@@ -594,7 +609,7 @@ const CERTIFICATES_DATA = [
         desc: "Advanced concepts in artificial intelligence implemented with Python, covering algorithmic design, data modeling, and intelligent problem solving.",
         skills: ["Python for AI", "Advanced AI Concepts", "Algorithmic Modeling", "Intelligent Systems"]
     },
-    // 16. Foundations of AI and Microsoft AI & ML (Jun 2, 2026)
+    // 17. Foundations of AI and Microsoft AI & ML (Jun 2, 2026)
     {
         title: "Foundations of AI and Microsoft AI & ML",
         provider: "Microsoft via Coursera",
@@ -608,7 +623,7 @@ const CERTIFICATES_DATA = [
         desc: "5-course program covering AI/ML foundations, machine learning, AI infrastructure, engineering, troubleshooting agents, and Azure AI.",
         skills: ["AI & ML Foundations", "Azure AI", "Machine Learning", "AI Engineering", "Troubleshooting Agents", "Capstone Project"]
     },
-    // 17. Google Data Analysis with Python (Jun 1, 2026)
+    // 18. Google Data Analysis with Python (Jun 1, 2026)
     {
         title: "Google Data Analysis with Python",
         provider: "Google via Coursera",
@@ -622,7 +637,7 @@ const CERTIFICATES_DATA = [
         desc: "Python fundamentals, functions, conditionals, loops, data structures, data cleaning, and analysis using NumPy, pandas, and Jupyter Notebook.",
         skills: ["Python", "NumPy", "pandas", "Jupyter Notebook", "Data Cleaning", "Exploratory Data Analysis", "Data Validation"]
     },
-    // 18. Accelerate Your Job Search with AI (Jun 1, 2026)
+    // 19. Accelerate Your Job Search with AI (Jun 1, 2026)
     {
         title: "Accelerate Your Job Search with AI",
         provider: "Google via Coursera",
@@ -636,7 +651,7 @@ const CERTIFICATES_DATA = [
         desc: "Applying AI tools and prompting strategies to structure career planning, optimize application materials, and streamline research workflows.",
         skills: ["AI-Assisted Workflows", "Career Planning", "Prompting", "Productivity"]
     },
-    // 19. Google AI (May 31, 2026)
+    // 20. Google AI (May 31, 2026)
     {
         title: "Google AI",
         provider: "Google via Coursera",
@@ -650,7 +665,7 @@ const CERTIFICATES_DATA = [
         desc: "Comprehensive 7-course program covering AI for brainstorming, research, writing, data analysis, content creation, app prototyping, and responsible evaluation.",
         skills: ["AI Productivity", "Prompting", "Research", "Content Creation", "Data Analysis", "Prototyping", "Responsible AI"]
     },
-    // 20. InAmigos Foundation Selection (May 23, 2026)
+    // 21. InAmigos Foundation Selection (May 23, 2026)
     {
         title: "AI Web Development Internship — Selection",
         provider: "InAmigos Foundation (via Internshala)",
@@ -664,7 +679,7 @@ const CERTIFICATES_DATA = [
         desc: "Official Certificate of Selection confirming selection for the AI Web Development internship position at InAmigos Foundation through Internshala.",
         skills: ["AI Web Development", "Internship Selection", "Full Stack AI Prototyping"]
     },
-    // 21. Infosys Artificial Intelligence (Feb 26, 2026)
+    // 22. Infosys Artificial Intelligence (Feb 26, 2026)
     {
         title: "Artificial Intelligence",
         provider: "Infosys Springboard / Infosys Limited",
@@ -678,7 +693,7 @@ const CERTIFICATES_DATA = [
         desc: "Course completion in foundational Artificial Intelligence principles, algorithms, and practical applications across software systems.",
         skills: ["Artificial Intelligence", "Intelligent Systems", "Infosys Springboard"]
     },
-    // 22. XACTITUDE IT Fest (Feb 10–11, 2026)
+    // 23. XACTITUDE IT Fest (Feb 10–11, 2026)
     {
         title: "XACTITUDE — National Intercollegiate IT Fest",
         provider: "Kristu Jayanti College (Autonomous), Bengaluru",
@@ -692,7 +707,7 @@ const CERTIFICATES_DATA = [
         desc: "Active participation in XACTITUDE 2026, a National Intercollegiate IT Fest organized by the Department of Computer Science.",
         skills: ["Technical Fest Participation", "IT Competitions", "Collegiate Networking"]
     },
-    // 23. Udemy The Complete AI Guide (Jan 18, 2026)
+    // 24. Udemy The Complete AI Guide (Jan 18, 2026)
     {
         title: "The Complete AI Guide: Learn ChatGPT, Generative AI & More",
         provider: "Udemy (Julian Melanson, Benza Maman)",
@@ -706,7 +721,7 @@ const CERTIFICATES_DATA = [
         desc: "41-hour masterclass exploring ChatGPT, generative AI workflows, prompt engineering, and multimodal AI productivity tools.",
         skills: ["ChatGPT", "Generative AI", "Prompt Engineering", "41 Hours Training"]
     },
-    // 24. Global Innovation Hackathon 2026 (Year 2026)
+    // 25. Global Innovation Hackathon 2026 (Year 2026)
     {
         title: "Global Innovation Hackathon 2026 — Build for a Better Future",
         provider: "Bharat Academix via Unstop",
@@ -720,7 +735,7 @@ const CERTIFICATES_DATA = [
         desc: "Participation by Sujan S from VSB College of Engineering as Team 'sujannotagain' in the Global Innovation Hackathon 2026.",
         skills: ["Hackathon Participation", "Unstop", "Team sujannotagain", "Technical Innovation"]
     },
-    // 25. Udemy AI for Strategic HR Operations (Sep 24, 2025)
+    // 26. Udemy AI for Strategic HR Operations (Sep 24, 2025)
     {
         title: "AI for Strategic HR Operations and Compliance [EN]",
         provider: "Udemy (Pritula Talent Academy)",
@@ -789,7 +804,8 @@ function openCertModalByIndex(index) {
     }
 
     if (assetLink) {
-        assetLink.href = cert.assetUrl;
+        assetLink.href = cert.pdfUrl || cert.assetUrl;
+        assetLink.textContent = cert.pdfUrl ? 'Open Original PDF ↗' : 'Open Original Asset ↗';
     }
 
     openModal('modal-cert-viewer');

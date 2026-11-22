@@ -424,14 +424,14 @@
                             <button type="button" id="cert-search-clear" class="cert-search-clear" title="Clear search">×</button>
                         </div>
                         <div class="cert-count-pill" id="cert-count-pill">
-                            Showing <strong id="cert-count-current">25</strong> of <strong id="cert-count-total">25</strong> credentials
+                            Showing <strong id="cert-count-current">26</strong> of <strong id="cert-count-total">26</strong> credentials
                         </div>
                     </div>
 
                     <div class="cert-filters-group" id="cert-filters-group">
-                        <button type="button" class="cert-filter-btn active" data-filter="all">All (25)</button>
-                        <button type="button" class="cert-filter-btn" data-filter="ai-ml">AI & ML (13)</button>
-                        <button type="button" class="cert-filter-btn" data-filter="gen-ai">Generative AI (4)</button>
+                        <button type="button" class="cert-filter-btn active" data-filter="all">All (26)</button>
+                        <button type="button" class="cert-filter-btn" data-filter="ai-ml">AI & ML (14)</button>
+                        <button type="button" class="cert-filter-btn" data-filter="gen-ai">Generative AI (5)</button>
                         <button type="button" class="cert-filter-btn" data-filter="data-python">Data Science & Python (4)</button>
                         <button type="button" class="cert-filter-btn" data-filter="cloud-db">Cloud & SQL (3)</button>
                         <button type="button" class="cert-filter-btn" data-filter="internships-completed">Completed Internships (2)</button>
@@ -440,7 +440,7 @@
                     </div>
 
                     <div class="cert-audit-banner">
-                        <span>🛡️ <strong>Inventory Status:</strong> 25 verified records from original certificate folder. Duplicate <code>infosys.jpeg</code> omitted from display. <code>UNSTOP.jpeg</code> registration variant flagged for review. Private student IDs withheld for privacy.</span>
+                        <span>🛡️ <strong>Inventory Status:</strong> 26 verified records from certificate repositories including IBM SkillsBuild certificate. Duplicate <code>infosys.jpeg</code> omitted from display. <code>UNSTOP.jpeg</code> registration variant flagged for review. Private student IDs withheld for privacy.</span>
                     </div>
                 </div>
                 
@@ -448,9 +448,48 @@
                 <div class="cert-grid-wrapper" style="max-height: 72vh; overflow-y: auto; padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.3);">
                     <div class="cert-grid" id="cert-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 24px;">
 
-                        <!-- 1. CodeAlpha Offer Letter -->
-                        <div class="glass-card cert-card group" data-category="internships-offers" data-index="0" data-title="Artificial Intelligence Intern — Offer Letter" data-provider="CodeAlpha" data-skills="AI Internship, Practical Assignments, Applied Projects">
+                        <!-- 1. IBM SkillsBuild — Craft Precise Prompts for AI Models -->
+                        <div class="glass-card cert-card group" data-category="ai-ml gen-ai" data-index="0" data-title="Craft Precise Prompts for AI Models" data-provider="IBM SkillsBuild" data-skills="Prompt Engineering, AI Models, Generative AI, Context Design, LLM Optimization, AI Accuracy">
                             <div class="card-graphic" onclick="openCertModalByIndex(0)">
+                                <img src="./certification/ibm/craft-precise-prompts-for-ai-models-cert.png" alt="Craft Precise Prompts for AI Models Certificate - IBM SkillsBuild" loading="lazy">
+                                <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
+                            </div>
+                            <div class="card-info">
+                                <div class="cert-card-header-meta">
+                                    <span class="status-badge status-blue">IBM Certificate</span>
+                                    <span class="cert-date-text">📅 Nov 22, 2026</span>
+                                </div>
+                                <h3 class="card-title">Craft Precise Prompts for AI Models</h3>
+                                <div class="cert-provider-text">🏛️ IBM SkillsBuild</div>
+                                <p class="card-desc">Specialized IBM credential certifying expertise in crafting structured, contextual, and precise prompts for AI and large language models to maximize output accuracy and relevance.</p>
+                                <div class="badge-container" style="flex-wrap: wrap;">
+                                    <span class="glass-badge">Prompt Engineering</span>
+                                    <span class="glass-badge">AI Models</span>
+                                    <span class="glass-badge">Generative AI</span>
+                                    <span class="glass-badge">Context Design</span>
+                                </div>
+                                <div class="cert-meta-container">
+                                    <div class="cert-meta-row">
+                                        <span class="cert-meta-label">Verification:</span>
+                                        <span class="cert-meta-badge-ver">✓ Credly Verified</span>
+                                    </div>
+                                    <div class="cert-meta-row">
+                                        <span class="cert-meta-label">Credential ID:</span>
+                                        <span class="cert-meta-value" style="font-family: inherit; font-size: 0.72rem; color: #94a3b8;">3b8bc92d-46b7-4bce-938d-986a58651204</span>
+                                    </div>
+                                </div>
+                                <div class="cert-actions-row">
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(0)">View Certificate</button>
+                                    <a href="https://www.credly.com/badges/3b8bc92d-46b7-4bce-938d-986a58651204/public_url" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify (Credly) ↗</a>
+                                    <a href="./certification/ibm/CraftPrecisePromptsforAIModels_Badge20261122-22-k0h1oa.pdf" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Original PDF ↗</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- 2. CodeAlpha Offer Letter -->
+                        <div class="glass-card cert-card group" data-category="internships-offers" data-index="1" data-title="Artificial Intelligence Intern — Offer Letter" data-provider="CodeAlpha" data-skills="AI Internship, Practical Assignments, Applied Projects">
+                            <div class="card-graphic" onclick="openCertModalByIndex(1)">
                                 <img src="./certification/OneDrive_1_06-10-2026/CODE%20ALPHA%20INTERNSHIP.jpeg" alt="Artificial Intelligence Intern — Offer Letter" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Offer Letter 🔍</span></div>
                             </div>
@@ -478,15 +517,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(0)">View Offer Letter</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(1)">View Offer Letter</button>
                                     <a href="./certification/OneDrive_1_06-10-2026/CODE%20ALPHA%20INTERNSHIP.jpeg" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Original File ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 2. YuvaIntern Offer Letter -->
-                        <div class="glass-card cert-card group" data-category="internships-offers" data-index="1" data-title="Virtual Data Analysis Associate Intern — Offer Letter" data-provider="YuvaIntern.com (Henry Harvin Education)" data-skills="Data Analysis, Structured Tasks, Industry Evaluation">
-                            <div class="card-graphic" onclick="openCertModalByIndex(1)">
+                        <!-- 3. YuvaIntern Offer Letter -->
+                        <div class="glass-card cert-card group" data-category="internships-offers" data-index="2" data-title="Virtual Data Analysis Associate Intern — Offer Letter" data-provider="YuvaIntern.com (Henry Harvin Education)" data-skills="Data Analysis, Structured Tasks, Industry Evaluation">
+                            <div class="card-graphic" onclick="openCertModalByIndex(2)">
                                 <img src="./certification/OneDrive_1_06-10-2026/YUVA%20INTERNSHIP.jpeg" alt="Virtual Data Analysis Associate Intern — Offer Letter" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Offer Letter 🔍</span></div>
                             </div>
@@ -514,15 +553,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(1)">View Offer Letter</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(2)">View Offer Letter</button>
                                     <a href="./certification/OneDrive_1_06-10-2026/YUVA%20INTERNSHIP.jpeg" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Original File ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 3. Microsoft SQL Server -->
-                        <div class="glass-card cert-card group" data-category="cloud-db" data-index="2" data-title="Microsoft SQL Server" data-provider="Microsoft via Coursera" data-skills="SQL, Microsoft SQL Server, T-SQL, Relational Database Design, Transactions, Indexing, Query Optimization, Database Security">
-                            <div class="card-graphic" onclick="openCertModalByIndex(2)">
+                        <!-- 4. Microsoft SQL Server -->
+                        <div class="glass-card cert-card group" data-category="cloud-db" data-index="3" data-title="Microsoft SQL Server" data-provider="Microsoft via Coursera" data-skills="SQL, Microsoft SQL Server, T-SQL, Relational Database Design, Transactions, Indexing, Query Optimization, Database Security">
+                            <div class="card-graphic" onclick="openCertModalByIndex(3)">
                                 <img src="./certification/OneDrive_1_06-10-2026/MICROSOFT%20SQL%20SERVER.jpeg" alt="Microsoft SQL Server Professional Certificate" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -551,15 +590,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(2)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(3)">View Certificate</button>
                                     <a href="https://coursera.org/verify/professional-cert/SUJASS1SQLD9WMS" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify Credential ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 4. Infosys AI Foundation Achievement -->
-                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="3" data-title="Artificial Intelligence Foundation Certification" data-provider="Infosys Springboard / Infosys Limited" data-skills="AI Foundations, Conceptual Frameworks, Machine Intelligence">
-                            <div class="card-graphic" onclick="openCertModalByIndex(3)">
+                        <!-- 5. Infosys AI Foundation Achievement -->
+                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="4" data-title="Artificial Intelligence Foundation Certification" data-provider="Infosys Springboard / Infosys Limited" data-skills="AI Foundations, Conceptual Frameworks, Machine Intelligence">
+                            <div class="card-graphic" onclick="openCertModalByIndex(4)">
                                 <img src="./certification/OneDrive_1_06-10-2026/INFOSYS%20AI%20FOUNDATION%20ACHIEVEMENT%20CERTIFICATE.png" alt="Artificial Intelligence Foundation Achievement" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -586,15 +625,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(3)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(4)">View Certificate</button>
                                     <a href="https://verify.onwingspan.com" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify (Wingspan) ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 5. Nxtsync DSA Internship -->
-                        <div class="glass-card cert-card group" data-category="internships-completed" data-index="4" data-title="Internship in DSA" data-provider="Nxtsync" data-skills="Data Structures, Algorithms Exposure, Algorithmic Problem Solving">
-                            <div class="card-graphic" onclick="openCertModalByIndex(4)">
+                        <!-- 6. Nxtsync DSA Internship -->
+                        <div class="glass-card cert-card group" data-category="internships-completed" data-index="5" data-title="Internship in DSA" data-provider="Nxtsync" data-skills="Data Structures, Algorithms Exposure, Algorithmic Problem Solving">
+                            <div class="card-graphic" onclick="openCertModalByIndex(5)">
                                 <img src="./certification/OneDrive_1_06-10-2026/nextsync.jpeg" alt="Internship in DSA - Nxtsync" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -622,15 +661,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(4)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(5)">View Certificate</button>
                                     <a href="./certification/OneDrive_1_06-10-2026/nextsync.jpeg" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Original File ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 6. Infosys Basics of Python -->
-                        <div class="glass-card cert-card group" data-category="data-python" data-index="5" data-title="Basics of Python" data-provider="Infosys Springboard / Infosys Limited" data-skills="Python Fundamentals, Scripting, Problem Solving, Automation">
-                            <div class="card-graphic" onclick="openCertModalByIndex(5)">
+                        <!-- 7. Infosys Basics of Python -->
+                        <div class="glass-card cert-card group" data-category="data-python" data-index="6" data-title="Basics of Python" data-provider="Infosys Springboard / Infosys Limited" data-skills="Python Fundamentals, Scripting, Problem Solving, Automation">
+                            <div class="card-graphic" onclick="openCertModalByIndex(6)">
                                 <img src="./certification/OneDrive_1_06-10-2026/BASIS%20OF%20PYTHON%20%28INFOSYS%29.jpeg" alt="Basics of Python - Infosys" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -658,15 +697,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(5)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(6)">View Certificate</button>
                                     <a href="https://verify.onwingspan.com" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify (Wingspan) ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 7. Infosys Introduction to Artificial Intelligence -->
-                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="6" data-title="Introduction to Artificial Intelligence" data-provider="Infosys Springboard / Infosys Limited" data-skills="AI Fundamentals, Terminology, Core Concepts">
-                            <div class="card-graphic" onclick="openCertModalByIndex(6)">
+                        <!-- 8. Infosys Introduction to Artificial Intelligence -->
+                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="7" data-title="Introduction to Artificial Intelligence" data-provider="Infosys Springboard / Infosys Limited" data-skills="AI Fundamentals, Terminology, Core Concepts">
+                            <div class="card-graphic" onclick="openCertModalByIndex(7)">
                                 <img src="./certification/OneDrive_1_06-10-2026/INTRODUCTION%20TO%20ARTIFICIAL%20INTELLIGENCE%20%28INFOSYS%29.jpeg" alt="Introduction to Artificial Intelligence - Infosys" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -693,15 +732,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(6)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(7)">View Certificate</button>
                                     <a href="https://verify.onwingspan.com" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify (Wingspan) ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 8. Infosys Introduction to Data Science -->
-                        <div class="glass-card cert-card group" data-category="data-python" data-index="7" data-title="Introduction to Data Science" data-provider="Infosys Springboard / Infosys Limited" data-skills="Data Science Fundamentals, Analytics Pipeline, Data Exploration">
-                            <div class="card-graphic" onclick="openCertModalByIndex(7)">
+                        <!-- 9. Infosys Introduction to Data Science -->
+                        <div class="glass-card cert-card group" data-category="data-python" data-index="8" data-title="Introduction to Data Science" data-provider="Infosys Springboard / Infosys Limited" data-skills="Data Science Fundamentals, Analytics Pipeline, Data Exploration">
+                            <div class="card-graphic" onclick="openCertModalByIndex(8)">
                                 <img src="./certification/OneDrive_1_06-10-2026/INTRODUCTION%20TO%20DATA%20SCIENCE%20.jpeg" alt="Introduction to Data Science - Infosys" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -728,15 +767,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(7)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(8)">View Certificate</button>
                                     <a href="https://verify.onwingspan.com" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify (Wingspan) ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 9. Infosys Introduction to Deep Learning -->
-                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="8" data-title="Introduction to Deep Learning" data-provider="Infosys Springboard / Infosys Limited" data-skills="Deep Learning Fundamentals, Neural Networks, Deep Architectures">
-                            <div class="card-graphic" onclick="openCertModalByIndex(8)">
+                        <!-- 10. Infosys Introduction to Deep Learning -->
+                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="9" data-title="Introduction to Deep Learning" data-provider="Infosys Springboard / Infosys Limited" data-skills="Deep Learning Fundamentals, Neural Networks, Deep Architectures">
+                            <div class="card-graphic" onclick="openCertModalByIndex(9)">
                                 <img src="./certification/OneDrive_1_06-10-2026/INTRODUCTION%20TO%20DEEP%20LEARNING%20%28INFOSYS%29.jpeg" alt="Introduction to Deep Learning - Infosys" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -763,15 +802,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(8)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(9)">View Certificate</button>
                                     <a href="https://verify.onwingspan.com" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify (Wingspan) ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 10. Infosys Introduction to Natural Language Processing -->
-                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="9" data-title="Introduction to Natural Language Processing" data-provider="Infosys Springboard / Infosys Limited" data-skills="Natural Language Processing, Text Processing, Language Models">
-                            <div class="card-graphic" onclick="openCertModalByIndex(9)">
+                        <!-- 11. Infosys Introduction to Natural Language Processing -->
+                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="10" data-title="Introduction to Natural Language Processing" data-provider="Infosys Springboard / Infosys Limited" data-skills="Natural Language Processing, Text Processing, Language Models">
+                            <div class="card-graphic" onclick="openCertModalByIndex(10)">
                                 <img src="./certification/OneDrive_1_06-10-2026/INTRODUCTION%20TO%20LANGUAGE%20PROCESSING%20.jpeg" alt="Introduction to Natural Language Processing - Infosys" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -799,15 +838,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(9)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(10)">View Certificate</button>
                                     <a href="https://verify.onwingspan.com" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify (Wingspan) ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 11. Triarch AI & ML Internship -->
-                        <div class="glass-card cert-card group" data-category="internships-completed" data-index="10" data-title="Internship in Artificial Intelligence and Machine Learning" data-provider="Triarch Private Limited" data-skills="AI and ML Exposure, Hands-on Internship Experience, Applied Machine Learning">
-                            <div class="card-graphic" onclick="openCertModalByIndex(10)">
+                        <!-- 12. Triarch AI & ML Internship -->
+                        <div class="glass-card cert-card group" data-category="internships-completed" data-index="11" data-title="Internship in Artificial Intelligence and Machine Learning" data-provider="Triarch Private Limited" data-skills="AI and ML Exposure, Hands-on Internship Experience, Applied Machine Learning">
+                            <div class="card-graphic" onclick="openCertModalByIndex(11)">
                                 <img src="./certification/OneDrive_1_06-10-2026/INTERNSHIP%2026.jpeg" alt="Internship in AI and Machine Learning - Triarch" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -835,15 +874,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(10)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(11)">View Certificate</button>
                                     <a href="./certification/OneDrive_1_06-10-2026/INTERNSHIP%2026.jpeg" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Original File ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 12. GUVI AWS Infrastructure for Beginners -->
-                        <div class="glass-card cert-card group" data-category="cloud-db" data-index="11" data-title="AWS Infrastructure for Beginners" data-provider="GUVI / HCL" data-skills="AWS Infrastructure Fundamentals, Cloud Concepts, Architecture Basics">
-                            <div class="card-graphic" onclick="openCertModalByIndex(11)">
+                        <!-- 13. GUVI AWS Infrastructure for Beginners -->
+                        <div class="glass-card cert-card group" data-category="cloud-db" data-index="12" data-title="AWS Infrastructure for Beginners" data-provider="GUVI / HCL" data-skills="AWS Infrastructure Fundamentals, Cloud Concepts, Architecture Basics">
+                            <div class="card-graphic" onclick="openCertModalByIndex(12)">
                                 <img src="./certification/OneDrive_1_06-10-2026/guvi%20certification.png" alt="AWS Infrastructure for Beginners - GUVI HCL" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -871,15 +910,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(11)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(12)">View Certificate</button>
                                     <a href="https://www.guvi.in/certificate?id=2f2vA23I8i7115g5c4" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify Credential ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 13. Oxford AI Foundations for Business Professionals -->
-                        <div class="glass-card cert-card group" data-category="ai-ml gen-ai" data-index="12" data-title="AI Foundations for Business Professionals" data-provider="University of Oxford (Saïd Business School via Coursera)" data-skills="AI Fundamentals, Generative AI Awareness, AI Governance, Business Use-Case Evaluation, Responsible AI">
-                            <div class="card-graphic" onclick="openCertModalByIndex(12)">
+                        <!-- 14. Oxford AI Foundations for Business Professionals -->
+                        <div class="glass-card cert-card group" data-category="ai-ml gen-ai" data-index="13" data-title="AI Foundations for Business Professionals" data-provider="University of Oxford (Saïd Business School via Coursera)" data-skills="AI Fundamentals, Generative AI Awareness, AI Governance, Business Use-Case Evaluation, Responsible AI">
+                            <div class="card-graphic" onclick="openCertModalByIndex(13)">
                                 <img src="./certification/OneDrive_1_06-10-2026/AI%20fundamental%20oxfords.png" alt="AI Foundations for Business Professionals - Oxford" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -907,15 +946,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(12)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(13)">View Certificate</button>
                                     <a href="https://coursera.org/verify/specialization/TVJ0OE3NCS9G" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify Credential ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 14. Vanderbilt Generative AI Strategic Leader -->
-                        <div class="glass-card cert-card group" data-category="gen-ai ai-ml" data-index="13" data-title="Generative AI Strategic Leader" data-provider="Vanderbilt University via Coursera" data-skills="Generative AI, Prompt Engineering, AI Research Workflows, Agentic AI Concepts, Strategic AI Use">
-                            <div class="card-graphic" onclick="openCertModalByIndex(13)">
+                        <!-- 15. Vanderbilt Generative AI Strategic Leader -->
+                        <div class="glass-card cert-card group" data-category="gen-ai ai-ml" data-index="14" data-title="Generative AI Strategic Leader" data-provider="Vanderbilt University via Coursera" data-skills="Generative AI, Prompt Engineering, AI Research Workflows, Agentic AI Concepts, Strategic AI Use">
+                            <div class="card-graphic" onclick="openCertModalByIndex(14)">
                                 <img src="./certification/OneDrive_1_06-10-2026/generative%20ai%20university.png" alt="Generative AI Strategic Leader - Vanderbilt" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -943,15 +982,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(13)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(14)">View Certificate</button>
                                     <a href="https://coursera.org/verify/specialization/10M9KAQFHA9X" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify Credential ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 15. Mind Luster Advanced AI with Python -->
-                        <div class="glass-card cert-card group" data-category="ai-ml data-python" data-index="14" data-title="Advanced Artificial Intelligence with Python" data-provider="Mind Luster" data-skills="Python for AI, Advanced AI Concepts, Algorithm Implementation">
-                            <div class="card-graphic" onclick="openCertModalByIndex(14)">
+                        <!-- 16. Mind Luster Advanced AI with Python -->
+                        <div class="glass-card cert-card group" data-category="ai-ml data-python" data-index="15" data-title="Advanced Artificial Intelligence with Python" data-provider="Mind Luster" data-skills="Python for AI, Advanced AI Concepts, Algorithm Implementation">
+                            <div class="card-graphic" onclick="openCertModalByIndex(15)">
                                 <img src="./certification/OneDrive_1_06-10-2026/mind%20luster.jpg" alt="Advanced Artificial Intelligence with Python - Mind Luster" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -979,15 +1018,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(14)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(15)">View Certificate</button>
                                     <a href="https://www.mindluster.com" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify (Mind Luster) ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 16. Microsoft AI & ML Engineering -->
-                        <div class="glass-card cert-card group" data-category="ai-ml cloud-db" data-index="15" data-title="Foundations of AI and Microsoft AI & ML" data-provider="Microsoft via Coursera" data-skills="AI & ML Foundations, Microsoft Azure AI, Machine Learning, AI Engineering, Troubleshooting Agents, Capstone Project">
-                            <div class="card-graphic" onclick="openCertModalByIndex(15)">
+                        <!-- 17. Microsoft AI & ML Engineering -->
+                        <div class="glass-card cert-card group" data-category="ai-ml cloud-db" data-index="16" data-title="Foundations of AI and Microsoft AI & ML" data-provider="Microsoft via Coursera" data-skills="AI & ML Foundations, Microsoft Azure AI, Machine Learning, AI Engineering, Troubleshooting Agents, Capstone Project">
+                            <div class="card-graphic" onclick="openCertModalByIndex(16)">
                                 <img src="./certification/OneDrive_1_06-10-2026/MICROSOFT%20AIML.png" alt="Microsoft AI & ML Engineering Certificate" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -1015,15 +1054,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(15)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(16)">View Certificate</button>
                                     <a href="https://coursera.org/verify/professional-cert/ZLMDUEZ66CED" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify Credential ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 17. Google Data Analysis with Python -->
-                        <div class="glass-card cert-card group" data-category="data-python" data-index="16" data-title="Google Data Analysis with Python" data-provider="Google via Coursera" data-skills="Python, NumPy, pandas, Jupyter Notebook, Data Cleaning, Exploratory Data Analysis, Data Validation">
-                            <div class="card-graphic" onclick="openCertModalByIndex(16)">
+                        <!-- 18. Google Data Analysis with Python -->
+                        <div class="glass-card cert-card group" data-category="data-python" data-index="17" data-title="Google Data Analysis with Python" data-provider="Google via Coursera" data-skills="Python, NumPy, pandas, Jupyter Notebook, Data Cleaning, Exploratory Data Analysis, Data Validation">
+                            <div class="card-graphic" onclick="openCertModalByIndex(17)">
                                 <img src="./certification/OneDrive_1_06-10-2026/GOOGLE%20DATA%20ANALYTICS.png" alt="Google Data Analysis with Python - Google" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -1052,15 +1091,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(16)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(17)">View Certificate</button>
                                     <a href="https://coursera.org/verify/specialization/QSAGTQFLLV48" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify Credential ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 18. Google Accelerate Your Job Search with AI -->
-                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="17" data-title="Accelerate Your Job Search with AI" data-provider="Google via Coursera" data-skills="AI-Assisted Job Search, Career Planning Workflows, Productivity Tools">
-                            <div class="card-graphic" onclick="openCertModalByIndex(17)">
+                        <!-- 19. Google Accelerate Your Job Search with AI -->
+                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="18" data-title="Accelerate Your Job Search with AI" data-provider="Google via Coursera" data-skills="AI-Assisted Job Search, Career Planning Workflows, Productivity Tools">
+                            <div class="card-graphic" onclick="openCertModalByIndex(18)">
                                 <img src="./certification/OneDrive_1_06-10-2026/JOB%20SEARCH%20WITH%20AI.png" alt="Accelerate Your Job Search with AI - Google" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -1087,15 +1126,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(17)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(18)">View Certificate</button>
                                     <a href="https://coursera.org/verify/N21EJBE3WSKI" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify Credential ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 19. Google AI Professional Certificate -->
-                        <div class="glass-card cert-card group" data-category="ai-ml gen-ai" data-index="18" data-title="Google AI" data-provider="Google Career Certificates via Coursera" data-skills="AI Productivity, Prompting, Research, Communication, Content Creation, Data Analysis, App-Building, Responsible AI">
-                            <div class="card-graphic" onclick="openCertModalByIndex(18)">
+                        <!-- 20. Google AI Professional Certificate -->
+                        <div class="glass-card cert-card group" data-category="ai-ml gen-ai" data-index="19" data-title="Google AI" data-provider="Google Career Certificates via Coursera" data-skills="AI Productivity, Prompting, Research, Communication, Content Creation, Data Analysis, App-Building, Responsible AI">
+                            <div class="card-graphic" onclick="openCertModalByIndex(19)">
                                 <img src="./certification/OneDrive_1_06-10-2026/Google%20ai.png" alt="Google AI Professional Certificate" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -1124,15 +1163,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(18)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(19)">View Certificate</button>
                                     <a href="https://coursera.org/verify/professional-cert/VPA9IF6M7O55" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify Credential ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 20. InAmigos AI Web Dev Selection -->
-                        <div class="glass-card cert-card group" data-category="internships-offers" data-index="19" data-title="AI Web Development Internship — Selection" data-provider="InAmigos Foundation via Internshala" data-skills="AI Web Development Opportunity, Selection Confirmation, Technical Aptitude">
-                            <div class="card-graphic" onclick="openCertModalByIndex(19)">
+                        <!-- 21. InAmigos AI Web Dev Selection -->
+                        <div class="glass-card cert-card group" data-category="internships-offers" data-index="20" data-title="AI Web Development Internship — Selection" data-provider="InAmigos Foundation via Internshala" data-skills="AI Web Development Opportunity, Selection Confirmation, Technical Aptitude">
+                            <div class="card-graphic" onclick="openCertModalByIndex(20)">
                                 <img src="./certification/OneDrive_1_06-10-2026/internshala%20selection.jpeg" alt="AI Web Development Internship Selection - Internshala" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Selection 🔍</span></div>
                             </div>
@@ -1159,15 +1198,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(19)">View Selection</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(20)">View Selection</button>
                                     <a href="https://internshala.com/verify_certificate" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify (Internshala) ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 21. Infosys Artificial Intelligence -->
-                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="20" data-title="Artificial Intelligence" data-provider="Infosys Springboard / Infosys Limited" data-skills="Artificial Intelligence Fundamentals, Core AI Principles">
-                            <div class="card-graphic" onclick="openCertModalByIndex(20)">
+                        <!-- 22. Infosys Artificial Intelligence -->
+                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="21" data-title="Artificial Intelligence" data-provider="Infosys Springboard / Infosys Limited" data-skills="Artificial Intelligence Fundamentals, Core AI Principles">
+                            <div class="card-graphic" onclick="openCertModalByIndex(21)">
                                 <img src="./certification/OneDrive_1_06-10-2026/ARTIFICIAL%20INTILIGENCE%20%28INFOSYSSPRINGBOARD%29.jpeg" alt="Artificial Intelligence - Infosys Springboard" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -1194,15 +1233,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(20)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(21)">View Certificate</button>
                                     <a href="https://verify.onwingspan.com" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify (Wingspan) ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 22. Kristu Jayanti XACTITUDE IT Fest -->
-                        <div class="glass-card cert-card group" data-category="events-hackathons" data-index="21" data-title="XACTITUDE — National Intercollegiate IT Fest" data-provider="Kristu Jayanti (Deemed to be University), Bengaluru" data-skills="Technical Event Participation, Intercollegiate IT Fest, Collaboration">
-                            <div class="card-graphic" onclick="openCertModalByIndex(21)">
+                        <!-- 23. Kristu Jayanti XACTITUDE IT Fest -->
+                        <div class="glass-card cert-card group" data-category="events-hackathons" data-index="22" data-title="XACTITUDE — National Intercollegiate IT Fest" data-provider="Kristu Jayanti (Deemed to be University), Bengaluru" data-skills="Technical Event Participation, Intercollegiate IT Fest, Collaboration">
+                            <div class="card-graphic" onclick="openCertModalByIndex(22)">
                                 <img src="./certification/OneDrive_1_06-10-2026/KJ%202K26.jpeg" alt="XACTITUDE IT Fest - Kristu Jayanti University" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -1230,15 +1269,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(21)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(22)">View Certificate</button>
                                     <a href="./certification/OneDrive_1_06-10-2026/KJ%202K26.jpeg" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Original File ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 23. Udemy The Complete AI Guide -->
-                        <div class="glass-card cert-card group" data-category="gen-ai ai-ml" data-index="22" data-title="The Complete AI Guide: Learn ChatGPT, Generative AI & More" data-provider="Udemy (Julian Melanson, Benza Maman)" data-skills="Generative AI Awareness, ChatGPT, Prompt Engineering, AI Productivity Tools">
-                            <div class="card-graphic" onclick="openCertModalByIndex(22)">
+                        <!-- 24. Udemy The Complete AI Guide -->
+                        <div class="glass-card cert-card group" data-category="gen-ai ai-ml" data-index="23" data-title="The Complete AI Guide: Learn ChatGPT, Generative AI & More" data-provider="Udemy (Julian Melanson, Benza Maman)" data-skills="Generative AI Awareness, ChatGPT, Prompt Engineering, AI Productivity Tools">
+                            <div class="card-graphic" onclick="openCertModalByIndex(23)">
                                 <img src="./certification/OneDrive_1_06-10-2026/Udemy%20ai%20learning%20.jpeg" alt="The Complete AI Guide - Udemy" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -1266,15 +1305,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(22)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(23)">View Certificate</button>
                                     <a href="https://ude.my/UC-f0412055-28a0-4881-a2ba-f731971ab299" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify (Udemy) ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 24. Global Innovation Hackathon 2026 -->
-                        <div class="glass-card cert-card group" data-category="events-hackathons" data-index="23" data-title="Global Innovation Hackathon 2026 — Build for a Better Future" data-provider="Bharat Academix via Unstop" data-skills="Hackathon Participation, Team sujannotagain, Technical Innovation">
-                            <div class="card-graphic" onclick="openCertModalByIndex(23)">
+                        <!-- 25. Global Innovation Hackathon 2026 -->
+                        <div class="glass-card cert-card group" data-category="events-hackathons" data-index="24" data-title="Global Innovation Hackathon 2026 — Build for a Better Future" data-provider="Bharat Academix via Unstop" data-skills="Hackathon Participation, Team sujannotagain, Technical Innovation">
+                            <div class="card-graphic" onclick="openCertModalByIndex(24)">
                                 <img src="./certification/OneDrive_1_06-10-2026/UNSTOP%202.jpeg" alt="Global Innovation Hackathon 2026 - Unstop" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -1302,15 +1341,15 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(23)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(24)">View Certificate</button>
                                     <a href="./certification/OneDrive_1_06-10-2026/UNSTOP%202.jpeg" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Original File ↗</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 25. Udemy AI for Strategic HR Operations -->
-                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="24" data-title="AI for Strategic HR Operations and Compliance [EN]" data-provider="Udemy (Pritula Talent Academy)" data-skills="AI Applications in HR, HR Operations, Compliance Awareness">
-                            <div class="card-graphic" onclick="openCertModalByIndex(24)">
+                        <!-- 26. Udemy AI for Strategic HR Operations -->
+                        <div class="glass-card cert-card group" data-category="ai-ml" data-index="25" data-title="AI for Strategic HR Operations and Compliance [EN]" data-provider="Udemy (Pritula Talent Academy)" data-skills="AI Applications in HR, HR Operations, Compliance Awareness">
+                            <div class="card-graphic" onclick="openCertModalByIndex(25)">
                                 <img src="./certification/OneDrive_1_06-10-2026/udemy%20HR.jpeg" alt="AI for Strategic HR Operations - Udemy" loading="lazy">
                                 <div class="hover-overlay"><span class="explore-btn">View Certificate 🔍</span></div>
                             </div>
@@ -1338,7 +1377,7 @@
                                     </div>
                                 </div>
                                 <div class="cert-actions-row">
-                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(24)">View Certificate</button>
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openCertModalByIndex(25)">View Certificate</button>
                                     <a href="https://ude.my/UC-2d5b0531-8d0d-421c-8b2d-364e98ea24a3" target="_blank" rel="noopener noreferrer" class="btn-action" onclick="event.stopPropagation()">Verify (Udemy) ↗</a>
                                 </div>
                             </div>
