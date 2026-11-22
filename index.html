@@ -1420,6 +1420,88 @@
 
                 <div class="achievements-grid">
                     
+                    <!-- Achievement 1: IBM SkillsBuild — Craft Precise Prompts for AI Models -->
+                    <div class="achievement-story-card featured-ibm">
+                        <div class="story-card-inner">
+                            <div class="story-media-column">
+                                <div class="story-media-frame" onclick="openModal('modal-ibm-achievement')">
+                                    <img src="assets/achievements/IBM%20COMMENT.jpeg" alt="IBM SkillsBuild Recognition Comment" loading="lazy">
+                                    <div class="story-media-badges">
+                                        <span class="status-badge status-blue">IBM SkillsBuild</span>
+                                        <span class="status-badge status-cyan">LinkedIn Engagement</span>
+                                    </div>
+                                    <div class="story-media-overlay">
+                                        <span class="story-media-caption">💬 IBM Corporate Comment & Reaction</span>
+                                        <span class="story-media-btn-pill">View Media 🔍</span>
+                                    </div>
+                                </div>
+                                <div class="story-thumbs-strip">
+                                    <div class="story-thumb-item active" onclick="openModal('modal-ibm-achievement')" title="IBM Comment">
+                                        <img src="assets/achievements/IBM%20COMMENT.jpeg" alt="IBM Comment on LinkedIn">
+                                    </div>
+                                    <div class="story-thumb-item" onclick="openModal('modal-ibm-achievement')" title="IBM Reaction">
+                                        <img src="assets/achievements/IBM%20REACTED.jpeg" alt="IBM Reaction on LinkedIn">
+                                    </div>
+                                    <div class="story-thumb-item" onclick="openCertModalByIndex(0)" title="Credential Certificate">
+                                        <img src="certification/ibm/craft-precise-prompts-for-ai-models-cert.png" alt="IBM Prompt Engineering Certificate">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="story-content-column">
+                                <div class="story-header-row">
+                                    <span class="status-badge status-blue">Certification & Recognition</span>
+                                    <span class="story-incident-date">📅 Nov 22, 2026</span>
+                                </div>
+                                <h3 class="story-card-title">Craft Precise Prompts for AI Models</h3>
+                                <div class="story-card-host">🏛️ IBM SkillsBuild • Learning & Professional Recognition Milestone</div>
+                                
+                                <div class="incident-breakdown-box">
+                                    <div class="incident-phase">
+                                        <div class="incident-phase-title blue">🎯 Course Mastery & Description</div>
+                                        <p class="incident-phase-text">Successfully completed IBM SkillsBuild's course on crafting precise prompts for AI models, developing practical knowledge of effective prompt engineering techniques and communicating clear instructions to generative AI systems.</p>
+                                    </div>
+                                    
+                                    <div class="incident-phase">
+                                        <div class="incident-phase-title blue">💬 Industry Engagement & Recognition</div>
+                                        <div class="ibm-recognition-box">
+                                            <div class="ibm-recognition-header">
+                                                <div class="ibm-recognition-avatar">IBM</div>
+                                                <div class="ibm-recognition-author-info">
+                                                    <div class="ibm-recognition-author-name">
+                                                        IBM <span class="verified-check" title="Official Organization">✓</span>
+                                                    </div>
+                                                    <div class="ibm-recognition-author-role">Company • 16M+ followers on LinkedIn</div>
+                                                </div>
+                                                <div class="ibm-recognition-badge">LinkedIn Interaction</div>
+                                            </div>
+                                            <div class="ibm-recognition-quote">
+                                                “Way to go! Superb job! 👏”
+                                            </div>
+                                            <div class="ibm-recognition-context">
+                                                IBM engaged with Sujan's LinkedIn achievement post celebrating completion of the course, providing encouraging professional recognition.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="story-meta-pills">
+                                    <span class="story-meta-pill">🏢 Organization: <strong>IBM SkillsBuild</strong></span>
+                                    <span class="story-meta-pill">📜 Status: <strong>Completed</strong></span>
+                                    <span class="story-meta-pill">📅 Issue Date: <strong>22 NOV 2026</strong></span>
+                                    <span class="story-meta-pill">🆔 Credential ID: <strong style="font-family: monospace; font-size: 0.7rem;">3b8bc92d-46b7-4bce-938d-986a58651204</strong></span>
+                                    <span class="story-meta-pill">💡 Skills: <strong>Prompt Engineering • Generative AI • Artificial Intelligence • AI Communication</strong></span>
+                                </div>
+                                
+                                <div class="story-actions-row">
+                                    <button type="button" class="btn-action btn-primary-action" onclick="openModal('modal-ibm-achievement')">View Comment & Media 💬</button>
+                                    <a href="https://www.credly.com/badges/3b8bc92d-46b7-4bce-938d-986a58651204/public_url" target="_blank" rel="noopener noreferrer" class="btn-action">View Credential ↗</a>
+                                    <a href="./certification/ibm/CraftPrecisePromptsforAIModels_Badge20261122-22-k0h1oa.pdf" target="_blank" rel="noopener noreferrer" class="btn-action">Original Certificate PDF ↗</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Incident 1: Smart India Hackathon (SIH 2026) -->
                     <div class="achievement-story-card featured-gold">
                         <div class="story-card-inner">
@@ -1925,6 +2007,41 @@
             </div>
             <div class="modal-body" style="display: flex; flex-direction: column; gap: 30px; padding-top: 15px;">
                 <img src="assets/sih-1.jpg" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            </div>
+        </div>
+    </div>
+    
+    <!-- IBM SKILLSBUILD RECOGNITION MODAL -->
+    <div id="modal-ibm-achievement" class="modal-overlay" onclick="closeModal(event, 'modal-ibm-achievement')">
+        <div class="modal-content" onclick="event.stopPropagation()" style="background: rgba(15,15,20,0.98); width: 95%; max-width: 900px; padding: 35px; text-align: center;">
+            <div class="modal-close" onclick="closeModal(null, 'modal-ibm-achievement')">×</div>
+            <div class="modal-header" style="margin-bottom: 20px;">
+                <span class="status-badge status-blue">IBM SkillsBuild Recognition</span>
+                <h2 class="modal-title" style="font-size: 1.6rem; margin-top: 8px;">Craft Precise Prompts for AI Models</h2>
+                <p class="modal-subtitle" style="font-size: 0.9rem; color: #93c5fd;">Official IBM LinkedIn Engagement & Learning Milestone</p>
+            </div>
+            <div class="modal-body" style="display: flex; flex-direction: column; align-items: center; max-height: 75vh; overflow-y: auto; padding: 0 10px 10px 10px; gap: 20px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; width: 100%;">
+                    <div style="background: rgba(0,0,0,0.5); padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); text-align: left;">
+                        <div style="font-size: 0.75rem; text-transform: uppercase; color: #38bdf8; font-weight: 700; margin-bottom: 8px;">💬 IBM LinkedIn Comment</div>
+                        <img src="assets/achievements/IBM%20COMMENT.jpeg" alt="IBM Comment on LinkedIn" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                    </div>
+                    <div style="background: rgba(0,0,0,0.5); padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); text-align: left;">
+                        <div style="font-size: 0.75rem; text-transform: uppercase; color: #38bdf8; font-weight: 700; margin-bottom: 8px;">👍 IBM LinkedIn Reaction</div>
+                        <img src="assets/achievements/IBM%20REACTED.jpeg" alt="IBM Reaction on LinkedIn" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                    </div>
+                </div>
+                <div style="width: 100%; text-align: left; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 18px; box-sizing: border-box;">
+                    <h4 style="font-size: 1rem; color: #fff; margin: 0 0 8px 0;">Milestone Overview</h4>
+                    <p style="font-size: 0.88rem; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 15px;">
+                        Completed IBM SkillsBuild's course on crafting precise prompts for AI models, developing practical prompt engineering expertise. Upon sharing the verified credential on LinkedIn, the official IBM organization personally engaged with the milestone post and commented: <em>“Way to go! Superb job! 👏”</em>.
+                    </p>
+                    <div class="project-actions" style="margin-top: 15px;">
+                        <a href="https://www.credly.com/badges/3b8bc92d-46b7-4bce-938d-986a58651204/public_url" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary-action">Verify Credly Credential ↗</a>
+                        <a href="./certification/ibm/CraftPrecisePromptsforAIModels_Badge20261122-22-k0h1oa.pdf" target="_blank" rel="noopener noreferrer" class="btn-action">Open Certificate PDF ↗</a>
+                        <button type="button" class="btn-action" onclick="closeModal(null, 'modal-ibm-achievement')">Close Preview</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
