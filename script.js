@@ -113,6 +113,9 @@ const sectionMap = {
     'certification': 'tab-certifications',
     'certifications': 'tab-certifications',
     'tab-certifications': 'tab-certifications',
+    'achievement': 'tab-achievements',
+    'achievements': 'tab-achievements',
+    'tab-achievements': 'tab-achievements',
     'contact': 'tab-contact',
     'tab-contact': 'tab-contact'
 };
@@ -123,6 +126,7 @@ const cleanHashMap = {
     'tab-project': 'project',
     'tab-events': 'events',
     'tab-certifications': 'certificate',
+    'tab-achievements': 'achievements',
     'tab-contact': 'contact'
 };
 

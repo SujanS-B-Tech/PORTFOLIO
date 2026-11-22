@@ -18,6 +18,8 @@ http.createServer((req, res) => {
         '/project': '/#project',
         '/projects': '/#project',
         '/events': '/#events',
+        '/achievement': '/#achievements',
+        '/achievements': '/#achievements',
         '/contact': '/#contact'
     };
 
