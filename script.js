@@ -344,19 +344,43 @@ function closeModal(event, modalId) {
         modal.classList.remove('active');
     }
     
-    // Restore background scrolling
-    document.body.style.overflow = '';
+    // Restore background scrolling only when no other modal remains open
+    if (!document.querySelector('.modal-overlay.active')) {
+        document.body.style.overflow = '';
+    }
 }
 
-// Global ESC key listener to close active modal
+// Global ESC key listener to close topmost active modal
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        const activeModal = document.querySelector('.modal-overlay.active');
-        if (activeModal) {
-            closeModal(null, activeModal.id);
+        const activeModals = document.querySelectorAll('.modal-overlay.active');
+        if (activeModals.length > 0) {
+            const topModal = activeModals[activeModals.length - 1];
+            closeModal(null, topModal.id);
         }
     }
 });
+
+// Open full-size evidence screenshot lightbox
+function openEvidenceLightbox(src, caption) {
+    const img = document.getElementById('evidence-lightbox-img');
+    const title = document.getElementById('evidence-lightbox-caption');
+    const link = document.getElementById('evidence-lightbox-raw-link');
+
+    if (img) {
+        img.src = src;
+        img.alt = caption || 'Contest submission evidence screenshot';
+    }
+    if (title) {
+        title.textContent = caption || 'Original Submission Screenshot';
+    }
+    if (link) {
+        link.href = src;
+    }
+
+    openModal('modal-evidence-lightbox');
+}
+window.openEvidenceLightbox = openEvidenceLightbox;
 
 // ==========================================
 // CAROUSEL SYSTEM LOGIC
